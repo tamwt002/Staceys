@@ -20,8 +20,10 @@ Short version: we [accidentally threw a party on our opening night](/blog/coffee
 Friday is for shaking off the work week. Think disco, boogie, funk and the occasional Italo banger that makes everyone lose their minds a little. The energy builds slowly. Early on it's chatty and warm, and by 10pm the tables are definitely in the way.
 
 - **When:** 7pm til late
-- **Sounds like:** disco, boogie, afro funk, balearic
+- **Sounds like:** disco, boogie, afro funk, balearic, and a fair bit of minimal house
 - **Good for:** after work drinks that turn into dancing
+
+Keep an eye out for **Wallace**, digging deep into minimal and micro house before tipping things into hardgroove once the room is warm. Want a preview? The [Behind The Stack Sessions mixes on Wallace's SoundCloud](https://soundcloud.com/offbeatarchive) are a very good place to start.
 
 ## Saturdays: Late Bloomers
 

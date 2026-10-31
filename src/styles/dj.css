@@ -214,3 +214,24 @@
 .dj__vinyl .vinyl {
   position: relative;
 }
+
+/* A lineup name can link out to the DJ's SoundCloud. */
+a.lineup__name {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--rust-bright);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+a.lineup__name:hover {
+  color: var(--rust);
+}
+
+.lineup__listen {
+  display: inline-block;
+  margin-left: 0.2em;
+  font-family: var(--font-body);
+  font-size: 0.75em;
+  color: var(--rust);
+}
