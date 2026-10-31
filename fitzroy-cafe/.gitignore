@@ -1,5 +1,0 @@
-node_modules
-dist
-.DS_Store
-# Generated from content/blog by build/blog-plugin.js
-/blog/

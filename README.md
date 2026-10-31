@@ -1,36 +1,142 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# [CAFE NAME] landing page
 
-## Getting Started
+A single-page site for an alternative cafe in Fitzroy with DJ nights every Friday and Saturday.
+Vanilla HTML, hand-written CSS, GSAP (ScrollTrigger + SplitText) and Lenis, bundled with Vite.
 
-First, run the development server:
+## Setup
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open the URL Vite prints (usually http://localhost:5173).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- `npm run build` writes a production build to `dist/`
+- `npm run preview` serves that build locally
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Project structure
 
-## Learn More
+```
+index.html              Homepage markup (sections 1 to 8, in order)
+site.config.js          Cafe name, live URL, address: used by the blog and SEO tags
+content/blog/           Blog posts, one Markdown file each
+build/                  Vite plugin that turns the Markdown into static blog pages
+public/images/          Drop your images here (see the table below)
+src/main.js             Homepage entry: imports styles, sets up Lenis + gsap.matchMedia()
+src/blog.js             Entry for the blog pages
+src/lib/                gsap.js (plugin registration), smooth-scroll.js, images.js, reveal.js
+src/animations/         One file per section: intro, hero, marquee, statement, about, dj-nights, menu,
+                        gallery, visit, footer, plus pointer.js (cursor bubble + magnetic buttons)
+src/styles/             tokens.css (palette, fonts), base.css, then one file per section
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Filling in the placeholders
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Search the project for these and replace them:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| Placeholder   | Where                                              |
+| ------------- | -------------------------------------------------- |
+| `[CAFE NAME]` | `site.config.js` (blog + SEO), plus page title, nav logo and footer in `index.html` |
+| `[ADDRESS]`   | Visit section                                      |
+| `[HOURS]`     | Visit section                                      |
+| `[HANDLE]`    | Visit section (Instagram link and label)           |
 
-## Deploy on Vercel
+The DJ lineup, menu items and prices are placeholder copy in `index.html`. Edit them in place.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+To use a real map, replace the contents of `.visit__map` in `index.html` with a Google Maps
+`<iframe>` (there's a comment showing exactly where). The CSS already sizes an iframe to fill it.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## The blog (Journal)
+
+Posts are Markdown files in `content/blog/`. At dev and build time, `build/blog-plugin.js` turns
+them into real static HTML pages, so search engines get fully rendered content:
+
+- `/blog/` lists every post, newest first
+- `/blog/<filename>/` is each post (the filename becomes the URL, so keep it short and keyword-y)
+- The two latest posts also appear in a "From the journal" strip on the homepage
+- `sitemap.xml`, `feed.xml` (RSS) and `robots.txt` are generated into the build
+
+**Writing a post:** copy an existing file in `content/blog/`, rename it, and edit the front matter:
+
+```md
+---
+title: "Your headline"
+description: "One or two sentences. This is what shows in Google results, so make it count."
+date: 2026-11-14
+author: "Theo"
+imageAlt: "What the cover photo shows"
+tags: [DJ nights, Fitzroy]
+draft: true
+---
+
+Your post in Markdown...
+```
+
+- `draft: true` shows the post in `npm run dev` but leaves it out of the production build.
+- The cover image is `public/images/blog/<filename>.jpg` (16:9, around 1600 × 900). Until it
+  exists you'll see a placeholder. You can point elsewhere with `image: /images/whatever.jpg`.
+- Writing `[CAFE NAME]` in a post is swapped for the name in `site.config.js`.
+- Save the file and the dev server reloads with the new page.
+
+**Before you go live:** set `url` in `site.config.js` to your real domain. Canonical links, the
+sitemap, RSS and social share tags are all built from it. Then submit
+`https://yourdomain/sitemap.xml` in Google Search Console.
+
+The `blog/` folder in the project root is generated and gitignored. It's rebuilt every time,
+so never edit files in there; edit the Markdown instead.
+
+**SEO included:** unique titles and meta descriptions, canonical URLs, Open Graph and Twitter
+cards, `BlogPosting` + breadcrumb structured data on posts, `CafeOrCoffeeShop` local business
+data on the homepage, internal links between posts, sitemap and RSS.
+
+## Swapping in your images
+
+1. Export each image with the filename below and drop it into `public/images/`.
+2. Refresh. That's it. Until a file exists, its slot shows a warm gradient block with a small
+   filename and ratio tag in the corner, so you can see where everything goes.
+3. Update the matching `alt` text in `index.html` so it describes your actual photo.
+
+JPGs around 80% quality are plenty. Below-the-fold images are lazy-loaded automatically.
+
+| Filename          | Where it appears                                | Aspect ratio | Suggested size |
+| ----------------- | ----------------------------------------------- | ------------ | -------------- |
+| `hero.jpg`        | Full-screen hero background (parallax)          | 16:9         | 2400 × 1350    |
+| `about-1.jpg`     | About collage, large arch-shaped photo (left)   | 4:5          | 800 × 1000     |
+| `about-2.jpg`     | About collage, blob-shaped photo (top right)    | 1:1          | 800 × 800      |
+| `about-3.jpg`     | About collage, centre photo (front)             | 3:4          | 750 × 1000     |
+| `about-4.jpg`     | About collage, small circle (bottom right)      | 1:1          | 600 × 600      |
+| `dj-friday.jpg`   | DJ Nights, Friday card                          | 16:10        | 1200 × 750     |
+| `dj-saturday.jpg` | DJ Nights, Saturday card                        | 16:10        | 1200 × 750     |
+| `menu-1.jpg`      | Menu card 1 (flat white)                        | 4:5          | 800 × 1000     |
+| `menu-2.jpg`      | Menu card 2 (dirty chai)                        | 4:5          | 800 × 1000     |
+| `menu-3.jpg`      | Menu card 3 (mushrooms on toast)                | 4:5          | 800 × 1000     |
+| `menu-4.jpg`      | Menu card 4 (banana bread)                      | 4:5          | 800 × 1000     |
+| `gallery-1.jpg`   | Horizontal gallery, photo 1                     | 4:5          | 800 × 1000     |
+| `gallery-2.jpg`   | Horizontal gallery, photo 2                     | 3:2          | 1200 × 800     |
+| `gallery-3.jpg`   | Horizontal gallery, photo 3                     | 3:4          | 750 × 1000     |
+| `gallery-4.jpg`   | Horizontal gallery, photo 4                     | 1:1          | 1000 × 1000    |
+| `gallery-5.jpg`   | Horizontal gallery, photo 5                     | 4:5          | 800 × 1000     |
+| `gallery-6.jpg`   | Horizontal gallery, photo 6                     | 3:2          | 1200 × 800     |
+| `blog/<post>.jpg` | Blog post cover and card, one per post          | 16:9         | 1600 × 900     |
+
+Images use `object-fit: cover`, so a slightly different ratio still works. It will just crop.
+Collage and circle shapes crop to the centre, so keep the subject roughly centred there.
+
+## Motion notes
+
+- All animations are created inside one `gsap.matchMedia()` block, so they clean up and rebuild
+  when you cross the desktop/mobile breakpoint.
+- **Everywhere (with motion on)**: curtain intro with a spinning record and counter, 3D headline
+  flip, drifting light leaks in the hero, scroll-filled statement, velocity-reactive marquee,
+  beat-pulsing glow behind the DJ record, elastic footer wordmark.
+- **Desktop** (≥ 900px wide and ≥ 600px tall): pinned DJ Nights (tonearm drops, cards swing in
+  in 3D, record spins with scroll), menu cards dealt onto the table, pinned horizontal gallery
+  that skews with scroll speed plus a progress bar, hero and collage parallax, pointer parallax,
+  a cursor bubble that labels things ("spin", "play", "yum"), magnetic buttons and card tilt.
+- To change the cursor labels, edit the `data-cursor` attributes in `index.html`.
+- **Mobile**: no pinning or scroll parallax. The gallery becomes a native swipe row, and DJ cards
+  simply fade up.
+- **prefers-reduced-motion**: no smooth scrolling and no GSAP animations at all. Everything is
+  visible straight away and the film grain stops moving.
+- Animations only touch `transform` and `opacity`.
