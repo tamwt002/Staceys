@@ -1,4 +1,4 @@
-# [CAFE NAME] landing page
+# Waldos
 
 A single-page site for an alternative cafe in Fitzroy with DJ nights every Friday and Saturday.
 Vanilla HTML, hand-written CSS, GSAP (ScrollTrigger + SplitText) and Lenis, bundled with Vite.
@@ -37,7 +37,6 @@ Search the project for these and replace them:
 
 | Placeholder   | Where                                              |
 | ------------- | -------------------------------------------------- |
-| `[CAFE NAME]` | `site.config.js` (blog + SEO), plus page title, nav logo and footer in `index.html` |
 | `[ADDRESS]`   | Visit section                                      |
 | `[HOURS]`     | Visit section                                      |
 | `[HANDLE]`    | Visit section (Instagram link and label)           |
@@ -76,7 +75,8 @@ Your post in Markdown...
 - `draft: true` shows the post in `npm run dev` but leaves it out of the production build.
 - The cover image is `public/images/blog/<filename>.jpg` (16:9, around 1600 × 900). Until it
   exists you'll see a placeholder. You can point elsewhere with `image: /images/whatever.jpg`.
-- Writing `[CAFE NAME]` in a post is swapped for the name in `site.config.js`.
+- Writing `[CAFE NAME]` in a post is swapped for the name in `site.config.js` (currently Waldos),
+  handy if the name ever changes.
 - Save the file and the dev server reloads with the new page.
 
 **Before you go live:** set `url` in `site.config.js` to your real domain. Canonical links, the

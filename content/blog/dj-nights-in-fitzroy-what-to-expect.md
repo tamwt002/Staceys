@@ -1,5 +1,5 @@
 ---
-title: "DJ nights in Fitzroy: what to expect on a Friday or Saturday at [CAFE NAME]"
+title: "DJ nights in Fitzroy: what to expect on a Friday or Saturday at Waldos"
 description: "Free entry, natural wine, snacks til 10 and records til late. Everything you need to know about our weekend DJ nights in Fitzroy, from the music to the house rules."
 date: 2026-10-31
 author: "Theo"

@@ -153,7 +153,8 @@ export function renderIndex(posts) {
 /* ---------- Single post ---------- */
 
 export function renderPost(post, posts) {
-  const title = `${post.title} · ${site.name}`;
+  // Skip the name suffix when the headline already mentions the cafe.
+  const title = post.title.includes(site.name) ? post.title : `${post.title} · ${site.name}`;
   const others = posts.filter((p) => p.slug !== post.slug).slice(0, 2);
 
   const structured = jsonLd([
