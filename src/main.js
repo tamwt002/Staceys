@@ -8,7 +8,6 @@ import { initImageSlots } from './lib/images.js';
 
 import { introAnimation } from './animations/intro.js';
 import { heroAnimation } from './animations/hero.js';
-import { marqueeAnimation } from './animations/marquee.js';
 import { statementAnimation } from './animations/statement.js';
 import { aboutAnimation } from './animations/about.js';
 import { djAnimation } from './animations/dj-nights.js';
@@ -44,7 +43,6 @@ mm.add(
       smoothScroll,
       intro.cleanup,
       heroAnimation({ ...context.conditions, delay: intro.delay }),
-      marqueeAnimation(context.conditions),
       statementAnimation(context.conditions),
       aboutAnimation(context.conditions),
       // Pinned sections must be created in page order so later triggers

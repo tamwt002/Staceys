@@ -26,7 +26,7 @@ public/images/          Drop your images here (see the table below)
 src/main.js             Homepage entry: imports styles, sets up Lenis + gsap.matchMedia()
 src/blog.js             Entry for the blog pages
 src/lib/                gsap.js (plugin registration), smooth-scroll.js, images.js, reveal.js
-src/animations/         One file per section: intro, hero, marquee, statement, about, dj-nights, menu,
+src/animations/         One file per section: intro, hero, statement, about, dj-nights, menu,
                         gallery, visit, footer, plus pointer.js (cursor bubble + magnetic buttons)
 src/styles/             tokens.css (palette, fonts), base.css, then one file per section
 ```
@@ -158,7 +158,7 @@ file with the same name to swap it.
 - All animations are created inside one `gsap.matchMedia()` block, so they clean up and rebuild
   when you cross the desktop/mobile breakpoint.
 - **Everywhere (with motion on)**: curtain intro with a spinning record and counter, 3D headline
-  flip, drifting light leaks in the hero, scroll-filled statement, velocity-reactive marquee,
+  flip, drifting light leaks in the hero, scroll-filled statement,
   beat-pulsing glow behind the DJ record, elastic footer wordmark.
 - **Desktop** (≥ 900px wide and ≥ 600px tall): pinned DJ Nights (tonearm drops, cards swing in
   in 3D, record spins with scroll), menu cards dealt onto the table, pinned horizontal gallery
