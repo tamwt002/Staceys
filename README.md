@@ -92,7 +92,8 @@ data on the homepage, internal links between posts, sitemap and RSS.
 
 ## Swapping in your images
 
-1. Export each image with the filename below and drop it into `public/images/`.
+1. Export each image with the filename below and drop it into `public/images/`, replacing the
+   Unsplash stand-ins (see Photo credits).
 2. Refresh. That's it. Until a file exists, its slot shows a warm gradient block with a small
    filename and ratio tag in the corner, so you can see where everything goes.
 3. Update the matching `alt` text in `index.html` so it describes your actual photo.
@@ -122,6 +123,35 @@ JPGs around 80% quality are plenty. Below-the-fold images are lazy-loaded automa
 
 Images use `object-fit: cover`, so a slightly different ratio still works. It will just crop.
 Collage and circle shapes crop to the centre, so keep the subject roughly centred there.
+
+## Photo credits
+
+The images in `public/images/` are free stock photos from [Unsplash](https://unsplash.com),
+used under the [Unsplash License](https://unsplash.com/license) (free for commercial use, credit
+appreciated but not required). They're stand-ins until you have your own photos: overwrite any
+file with the same name to swap it.
+
+| File | Photographer |
+| ---- | ------------ |
+| `hero.jpg` | [Haberdoedas](https://unsplash.com/photos/a-dimly-lit-coffee-bar-with-plants-and-espresso-machine-XEaMMGDy-fE) |
+| `about-1.jpg` | [Brent Gorwin](https://unsplash.com/photos/man-pouring-latte-on-coffee-vhQUnmnOLys) |
+| `about-2.jpg` | [Anna Kharkivska](https://unsplash.com/photos/hanging-plants-against-a-weathered-brick-wall-2ge0kjuud6A) |
+| `about-3.jpg` | [Haoli Chen](https://unsplash.com/photos/black-leather-chair-and-vinyl-records-EYDtugA7Mbg) |
+| `about-4.jpg` | [Joe Hepburn](https://unsplash.com/photos/cup-of-cappuccino-EcWFOYOpkpY) |
+| `dj-friday.jpg` | [Matty Adame](https://unsplash.com/photos/man-playing-dj-turntable-nLUb9GThIcg) |
+| `dj-saturday.jpg` | [Andrea Cipriani](https://unsplash.com/photos/vinyl-record-spinning-on-turntable-GTIutdltrkA) |
+| `menu-1.jpg` | [Polina Kuzovkova](https://unsplash.com/photos/a-cup-of-coffee-on-a-saucer-on-a-table-2tfFzduVohU) |
+| `menu-2.jpg` | [Empreinte](https://unsplash.com/photos/iced-coffee-with-milk-pouring-02O1bXB_fgk) |
+| `menu-3.jpg` | [Sadia Alam](https://unsplash.com/photos/sauteed-mushrooms-with-garlic-and-toast-bEgpca34KYk) |
+| `menu-4.jpg` | [Diego Arenas de Rodrigo](https://unsplash.com/photos/slices-of-banana-bread-on-a-wooden-cutting-board-bWj_oZPjXS8) |
+| `gallery-1.jpg` | [Esra Afşar](https://unsplash.com/photos/two-empty-chairs-at-a-cafe-counter-overlooking-street-vAXn-LXUQa8) |
+| `gallery-2.jpg` | [Arash](https://unsplash.com/photos/yellow-string-lights-lighted-during-nighttime-UZjBmpaXq_w) |
+| `gallery-3.jpg` | [Cord Allman](https://unsplash.com/photos/hands-browsing-through-a-crate-of-vinyl-records-oWAiw137GKw) |
+| `gallery-4.jpg` | [Andrii Solok](https://unsplash.com/photos/friends-enjoying-food-and-drinks-at-an-outdoor-cafe-table-NfO0dUwM-iE) |
+| `gallery-5.jpg` | [Jim Luo](https://unsplash.com/photos/man-with-dog-outside-cafe-AwiJa_B39_Q) |
+| `gallery-6.jpg` | [rocky Liu](https://unsplash.com/photos/a-bike-parked-outside-of-a-store-at-night-Trh31ZOamdw) |
+| `blog/coffee-for-the-soul-our-story.jpg` | [Queensland, Australia](https://unsplash.com/photos/people-laughing-at-breakfast-restaurant-table-QQNEOQxDwM8) |
+| `blog/dj-nights-in-fitzroy-what-to-expect.jpg` | [Aleksandr Popov](https://unsplash.com/photos/people-inside-building-at-night-DPspiXW2zWg) |
 
 ## Motion notes
 

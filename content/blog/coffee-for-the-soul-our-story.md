@@ -3,7 +3,7 @@ title: "The power of coffee for the soul (and the night four friends started a c
 description: "How a broken espresso machine, a milk crate of records and four friends in a Fitzroy share house turned into [CAFE NAME]. Plus why we think coffee is good for the soul."
 date: 2026-10-24
 author: "Mia, Theo, Ana and Kofi"
-imageAlt: "The four founders laughing behind the counter, plants hanging overhead"
+imageAlt: "Four friends laughing over breakfast at a sunlit cafe table"
 tags: [our story, Fitzroy cafe, coffee, Melbourne]
 ---
 

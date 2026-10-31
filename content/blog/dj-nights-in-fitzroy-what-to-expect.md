@@ -3,7 +3,7 @@ title: "DJ nights in Fitzroy: what to expect on a Friday or Saturday at [CAFE NA
 description: "Free entry, natural wine, snacks til 10 and records til late. Everything you need to know about our weekend DJ nights in Fitzroy, from the music to the house rules."
 date: 2026-10-31
 author: "Theo"
-imageAlt: "A crowd dancing between vintage tables under warm string lights"
+imageAlt: "A crowd gathered around the DJ on a night out"
 tags: [DJ nights, Fitzroy, things to do in Melbourne, vinyl]
 ---
 
