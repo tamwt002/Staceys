@@ -55,12 +55,19 @@ const teas = [
   },
 ];
 
-const logoPlaceholders = [
-  "Broadsheet Sydney",
-  "Time Out Sydney",
-  "Good Food",
-  "The Saturday Paper",
-  "Concrete Playground",
+const pressQuotes = [
+  {
+    quote: "The kind of tea room that makes you feel like you've discovered something.",
+    source: "Broadsheet Sydney",
+  },
+  {
+    quote: "Considered, specific, unhurried — a shop that trusts the tea to do the talking.",
+    source: "Good Food",
+  },
+  {
+    quote: "Newtown's best reason to skip the flat white.",
+    source: "Time Out Sydney",
+  },
 ];
 
 export default function Home() {
@@ -129,16 +136,14 @@ export default function Home() {
             </p>
           </section>
 
-          {/* ── As seen in ───────────────────────────────────── */}
-          <section className="logo-strip" aria-label="As featured in">
-            <p className="logo-strip-label">As featured in</p>
-            <ul className="logo-list">
-              {logoPlaceholders.map((name) => (
-                <li key={name} className="logo-slot" aria-label={name}>
-                  <span className="logo-slot-inner">LOGO</span>
-                </li>
-              ))}
-            </ul>
+          {/* ── Press quotes ─────────────────────────────────── */}
+          <section className="press-strip" aria-label="Press">
+            {pressQuotes.map((item, i) => (
+              <blockquote key={i} className="press-quote">
+                <p className="press-quote-text">&ldquo;{item.quote}&rdquo;</p>
+                <cite className="press-quote-source">{item.source}</cite>
+              </blockquote>
+            ))}
           </section>
 
           {/* ── About ─────────────────────────────────────────── */}
@@ -147,6 +152,15 @@ export default function Home() {
               About
             </p>
             <div className="about-grid">
+              <div className="about-image-wrap">
+                {/* Replace /images/shop.jpg with a real photograph of the shop interior */}
+                <img
+                  src="/images/shop.jpg"
+                  alt="Interior of Tino's Tea, 14 King Street Newtown"
+                  className="about-image"
+                />
+              </div>
+              <div className="about-text">
               <h2 className="about-headline">A small shop. A short list.</h2>
               <div className="about-body">
                 <p>
@@ -169,6 +183,7 @@ export default function Home() {
                   Whatever that means for the menu at any given moment,
                   it&apos;s written on the board by the door.
                 </p>
+              </div>
               </div>
             </div>
           </section>

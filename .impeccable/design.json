@@ -1,0 +1,143 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-06-17T00:00:00Z",
+  "title": "Design System: Tino's Tea",
+  "extensions": {
+    "colorMeta": {
+      "ink": {
+        "role": "primary",
+        "displayName": "Dried Leaf Ink",
+        "canonical": "oklch(22% 0.035 155)",
+        "tonalRamp": ["#040d09", "#0a1610", "#1c2b24", "#2e4438", "#466358", "#698f82", "#96bdb2", "#cde0db"]
+      },
+      "amber": {
+        "role": "secondary",
+        "displayName": "Brewed Amber",
+        "canonical": "oklch(60% 0.165 60)",
+        "tonalRamp": ["#4a1a00", "#6d2f00", "#904900", "#b26000", "#c4751a", "#d89547", "#e8b877", "#f6e0c0"]
+      },
+      "parchment": {
+        "role": "neutral",
+        "displayName": "Aged Parchment",
+        "canonical": "oklch(94% 0.015 90)",
+        "tonalRamp": ["#e0d8c6", "#e5dece", "#eae4d7", "#ede8dc", "#f0ece0", "#f3f0e6", "#f6f4ed", "#faf9f6"]
+      },
+      "sage": {
+        "role": "tertiary",
+        "displayName": "Dried Sage",
+        "canonical": "oklch(70% 0.048 155)",
+        "tonalRamp": ["#253b2f", "#3a5548", "#517060", "#698c79", "#8aaa8e", "#a8c0aa", "#c5d6c6", "#e3ece4"]
+      },
+      "celadon": {
+        "role": "neutral",
+        "displayName": "Celadon Tint",
+        "canonical": "oklch(89% 0.032 155)",
+        "tonalRamp": ["#3a5448", "#4f6e5e", "#698a78", "#85a692", "#a4c1ae", "#bfd6c8", "#dce8d8", "#eef5ec"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display / Heading", "purpose": "Tea names (italic), about headline, section headings. Always Cormorant Garamond." },
+      "title": { "displayName": "Title", "purpose": "Shop name in header. One instance on the page." },
+      "body": { "displayName": "Body", "purpose": "All prose: about copy, brewing steps text, footer body. IBM Plex Mono." },
+      "label": { "displayName": "Label", "purpose": "Nav links, table headers, section labels, footer headings. Uppercase, wide tracking. IBM Plex Mono." },
+      "tea-name": { "displayName": "Tea Name", "purpose": "Tea names in menu table — italic, medium size, Cormorant Garamond." }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "rule-draw",
+        "value": "clip-path: inset(0 100% 0 0) → inset(0 0 0 0), 0.9s cubic-bezier(0.16,1,0.3,1) 0.15s",
+        "purpose": "The site's single animation. Fires once on page load — a 1px horizontal rule draws left-to-right across the header. Represents steeping. Nothing else moves."
+      }
+    ],
+    "breakpoints": [
+      { "name": "mobile", "value": "640px", "note": "Spine hides, header stacks, table collapses to stacked block layout" },
+      { "name": "tablet", "value": "900px", "note": "About and brewing grids collapse from 2-column to 1-column" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Nav Link",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Uppercase mono nav link with opacity-only hover.",
+      "html": "<a href=\"#\" class=\"ds-nav-link\">MENU</a>",
+      "css": "@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&display=swap'); .ds-nav-link { font-family: 'IBM Plex Mono', 'Courier New', monospace; font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none; color: #1c2b24; opacity: 0.7; transition: opacity 0.15s ease; display: inline-block; } .ds-nav-link:hover { opacity: 1; } .ds-nav-link:focus-visible { outline: 2px solid #c4751a; outline-offset: 3px; border-radius: 1px; opacity: 1; }"
+    },
+    {
+      "name": "Section Label",
+      "kind": "custom",
+      "refersTo": "section-label",
+      "description": "Tiny uppercase mono eyebrow — used once per section, aria-hidden.",
+      "html": "<p class=\"ds-section-label\" aria-hidden=\"true\">THE MENU</p>",
+      "css": "@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&display=swap'); .ds-section-label { font-family: 'IBM Plex Mono', 'Courier New', monospace; font-size: 0.6rem; letter-spacing: 0.28em; text-transform: uppercase; font-weight: 400; color: #1c2b24; opacity: 0.4; margin: 0; }"
+    },
+    {
+      "name": "Tea Name Cell",
+      "kind": "custom",
+      "refersTo": "tea-name-cell",
+      "description": "Italic serif display for tea names in the menu catalog.",
+      "html": "<span class=\"ds-tea-name\">Silver Needle</span>",
+      "css": "@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,400&display=swap'); .ds-tea-name { font-family: 'Cormorant Garamond', 'Georgia', serif; font-size: 1.25rem; font-weight: 400; font-style: italic; line-height: 1.25; color: #1c2b24; display: block; }"
+    },
+    {
+      "name": "Brewing Step",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "Numbered brewing instruction with amber Cormorant counter and mono body.",
+      "html": "<ol class=\"ds-brewing-list\"><li class=\"ds-brewing-step\">Start with water that hasn't been over-boiled. 80°C for greens; 95°C for black.</li></ol>",
+      "css": "@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=IBM+Plex+Mono:wght@400&display=swap'); .ds-brewing-list { list-style: none; counter-reset: steps; padding: 0; margin: 0; } .ds-brewing-step { counter-increment: steps; display: grid; grid-template-columns: 2rem 1fr; gap: 1.25rem; padding: 1.35rem 0; border-bottom: 1px solid rgba(28,43,36,0.18); font-family: 'IBM Plex Mono', 'Courier New', monospace; font-size: 0.86rem; line-height: 1.7; color: #1c2b24; opacity: 0.8; } .ds-brewing-step::before { content: counter(steps); font-family: 'Cormorant Garamond', 'Georgia', serif; font-size: 1.6rem; font-weight: 300; line-height: 1.1; color: #c4751a; opacity: 0.75; }"
+    },
+    {
+      "name": "Logo Placeholder Slot",
+      "kind": "custom",
+      "refersTo": "logo-slot",
+      "description": "Outlined rectangle for press/partner logos. Swap inner content for <img> when real logos are available.",
+      "html": "<div class=\"ds-logo-slot\" aria-label=\"Broadsheet Sydney\"><span class=\"ds-logo-slot-inner\">LOGO</span></div>",
+      "css": "@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&display=swap'); .ds-logo-slot { border: 1px solid rgba(28,43,36,0.18); width: 7rem; height: 2.5rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; } .ds-logo-slot-inner { font-family: 'IBM Plex Mono', 'Courier New', monospace; font-size: 0.58rem; letter-spacing: 0.2em; text-transform: uppercase; color: #1c2b24; opacity: 0.25; }"
+    },
+    {
+      "name": "Footer Surface",
+      "kind": "custom",
+      "refersTo": "footer-surface",
+      "description": "Full surface inversion — ink background with parchment text. The site's only dark surface.",
+      "html": "<div class=\"ds-footer\"><p class=\"ds-footer-name\">Tino's Tea</p><p class=\"ds-footer-heading\">HOURS</p><p class=\"ds-footer-body\">Tuesday – Friday 10:00–18:00</p></div>",
+      "css": "@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=IBM+Plex+Mono:wght@400&display=swap'); .ds-footer { background-color: #1c2b24; color: #f0ece0; padding: 3rem; font-family: 'IBM Plex Mono', monospace; } .ds-footer-name { font-family: 'Cormorant Garamond', 'Georgia', serif; font-size: 1.9rem; font-weight: 300; letter-spacing: 0.03em; opacity: 0.9; line-height: 1; margin-bottom: 1rem; } .ds-footer-heading { font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase; opacity: 0.35; margin-bottom: 0.75rem; font-weight: 400; } .ds-footer-body { font-size: 0.8rem; line-height: 2; opacity: 0.65; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Letter from the Farmer",
+    "overview": "This system is built on the premise that specificity is the luxury. Not a heritage brand telling you it's special — an actual letter from the farm, typed on a manual, with ink that bled a little at the edges. The estate name, the cultivar, the exact steep time: these are not decoration. They are the product.\n\nThe aesthetic is restrained to the point of severity, but warmth enters through specificity of language and the acute contrast of Cormorant Garamond's hairline serifs against IBM Plex Mono's precision spacing. The parchment background is the physical colour of the document the metaphor demands. The ink carries a green undertone — the colour of tea itself.\n\nThis system explicitly rejects: mass-market tea aesthetics (T2, glossy gift packaging), bubble-tea-chain branding (casual, quick-service, trend-driven), and the generic warm-artisan template (script fonts, cream backgrounds, stock photography of tea leaves).",
+    "keyCharacteristics": [
+      "Zero border-radius across every surface — sharp edges only",
+      "No shadows, no elevation — depth through colour contrast and 1px rules alone",
+      "One animation per session load; stillness thereafter",
+      "Cormorant Garamond italic for named items; IBM Plex Mono for all data, labels, body",
+      "Amber used precisely: brewing step counters and nav hover only"
+    ],
+    "rules": [
+      { "name": "The One Amber Rule", "body": "Amber (#c4751a) appears in exactly two contexts: brewing step counters and nav hover. Nowhere else. Its scarcity is the point.", "section": "colors" },
+      { "name": "The No-Shadow Rule", "body": "No box-shadow, filter: drop-shadow, or text-shadow anywhere. Surfaces are separated by 1px rules and colour contrast only.", "section": "elevation" },
+      { "name": "The Flat-By-Default Rule", "body": "If a design proposal introduces a box-shadow, replace it with a border, a background tint, or a colour change.", "section": "elevation" },
+      { "name": "The Italic-for-Names Rule", "body": "Cormorant Garamond italic is used exclusively for named things: tea names, headings, the menu footnote, the brewing intro. Running text is never italic.", "section": "typography" },
+      { "name": "The Mono-for-Data Rule", "body": "Any piece of information that could appear in a table, label, or measurement uses IBM Plex Mono. Cormorant Garamond never carries factual data.", "section": "typography" }
+    ],
+    "dos": [
+      "Do use Cormorant Garamond italic for tea names, headings, and named items only",
+      "Do use IBM Plex Mono for all labels, data, measurements, and body text",
+      "Do keep amber to brewing step counters and nav hover only",
+      "Do use 1px rules as the sole separation mechanism",
+      "Do write copy that is specific and named: estate names, cultivar details, steep temperatures"
+    ],
+    "donts": [
+      "Don't add box-shadow, drop-shadow, or text-shadow to anything",
+      "Don't use border-radius anywhere — all corners are sharp",
+      "Don't use amber for emphasis outside the two defined contexts",
+      "Don't use gradient text or background-clip: text",
+      "Don't introduce a new font family — Cormorant Garamond and IBM Plex Mono only",
+      "Don't add a second animation — the rule-draw is the site's one deliberate motion moment",
+      "Don't use the words premium, artisan, curated, craft, or experience in copy",
+      "Don't render the menu as cards — it is a table because it IS a table"
+    ]
+  }
+}

@@ -260,9 +260,30 @@ body {
 
 .about-grid {
   display: grid;
-  grid-template-columns: 1fr 2.5fr;
-  gap: 5rem;
+  grid-template-columns: 2fr 3fr;
+  gap: 4rem;
   align-items: start;
+}
+
+.about-image-wrap {
+  position: sticky;
+  top: 2rem;
+}
+
+.about-image {
+  width: 100%;
+  display: block;
+  border: 1px solid var(--rule-faint);
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  /* Celadon placeholder background until real photo is supplied */
+  background-color: var(--celadon);
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .about-headline {
@@ -283,50 +304,51 @@ body {
   margin-top: 1.25rem;
 }
 
-/* ─── Logo strip ─────────────────────────────────────────── */
+/* ─── Press quotes ───────────────────────────────────────── */
 
-.logo-strip {
-  padding: 2.5rem 3rem;
+.press-strip {
+  padding: 0 3rem;
   border-bottom: 1px solid var(--rule-faint);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.press-quote {
+  padding: 2.5rem 2.5rem 2.5rem 0;
+  border-right: 1px solid var(--rule-faint);
   display: flex;
-  align-items: center;
-  gap: 3rem;
-  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.25rem;
 }
 
-.logo-strip-label {
-  font-size: 0.6rem;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-  opacity: 0.35;
-  white-space: nowrap;
-  flex-shrink: 0;
+.press-quote:last-child {
+  border-right: none;
+  padding-right: 0;
+  padding-left: 2.5rem;
 }
 
-.logo-list {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-  flex: 1;
+.press-quote:not(:first-child):not(:last-child) {
+  padding-left: 2.5rem;
 }
 
-.logo-slot {
-  border: 1px solid var(--rule-faint);
-  width: 7rem;
-  height: 2.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
+.press-quote-text {
+  font-family: var(--font-cormorant), "Georgia", serif;
+  font-size: 1.1rem;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.5;
+  opacity: 0.75;
 }
 
-.logo-slot-inner {
+.press-quote-source {
+  font-family: var(--font-mono), "Courier New", monospace;
   font-size: 0.58rem;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
-  opacity: 0.25;
+  font-style: normal;
+  opacity: 0.4;
+  display: block;
 }
 
 /* ─── Brewing ────────────────────────────────────────────── */
@@ -434,8 +456,35 @@ body {
     gap: 2rem;
   }
 
+  .about-image-wrap {
+    position: static;
+  }
+
+  .about-image {
+    aspect-ratio: 16 / 9;
+  }
+
   .about-headline {
     font-size: 2.1rem;
+  }
+
+  .press-strip {
+    grid-template-columns: 1fr;
+    padding: 0 3rem;
+  }
+
+  .press-quote,
+  .press-quote:last-child,
+  .press-quote:not(:first-child):not(:last-child) {
+    padding: 2rem 0;
+    padding-left: 0;
+    padding-right: 0;
+    border-right: none;
+    border-bottom: 1px solid var(--rule-faint);
+  }
+
+  .press-quote:last-child {
+    border-bottom: none;
   }
 }
 
@@ -465,18 +514,8 @@ body {
     padding: 3rem 1.25rem;
   }
 
-  .logo-strip {
-    padding: 2rem 1.25rem;
-    gap: 1.5rem;
-  }
-
-  .logo-list {
-    gap: 1rem;
-  }
-
-  .logo-slot {
-    width: 5.5rem;
-    height: 2rem;
+  .press-strip {
+    padding: 0 1.25rem;
   }
 
   .menu-table thead {
