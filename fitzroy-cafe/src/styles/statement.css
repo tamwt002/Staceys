@@ -1,0 +1,43 @@
+.statement {
+  padding: clamp(5rem, 14vw, 11rem) var(--gutter) clamp(3rem, 8vw, 6rem);
+  background: var(--cream);
+}
+
+.statement__text {
+  max-width: 22ch;
+  margin: 0 auto;
+  font-family: var(--font-display);
+  font-variation-settings: var(--display-axes);
+  font-weight: 750;
+  font-size: clamp(2.1rem, 6.2vw, 5.6rem);
+  line-height: 1.04;
+  letter-spacing: -0.03em;
+  text-align: center;
+  text-wrap: balance;
+}
+
+.statement__icon {
+  display: inline-grid;
+  place-items: center;
+  width: 1.5em;
+  height: 0.95em;
+  margin: 0 0.05em;
+  border-radius: 999px;
+  vertical-align: -0.12em;
+  background: var(--rust);
+  color: var(--cream);
+}
+
+.statement__icon svg {
+  width: 0.62em;
+  height: 0.62em;
+}
+
+.statement__icon--record {
+  background: var(--mustard);
+  color: var(--ink);
+}
+
+.statement__icon--plant {
+  background: var(--forest);
+}

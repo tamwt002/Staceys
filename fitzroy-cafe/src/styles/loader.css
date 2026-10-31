@@ -1,0 +1,66 @@
+/* Intro curtain. Only shown when JS runs and motion is allowed. */
+.loader {
+  display: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .js .loader {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 300;
+    pointer-events: none;
+    /* Safety net: if the script never runs, get out of the way. */
+    animation: loader-fallback 0s 5s forwards;
+  }
+}
+
+@keyframes loader-fallback {
+  to { visibility: hidden; }
+}
+
+.loader__panel {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 50.5%;
+  background: var(--forest-deep);
+}
+
+.loader__panel--top { top: 0; }
+.loader__panel--bottom { bottom: 0; }
+
+.loader__center {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 0.6rem;
+  color: var(--cream);
+}
+
+.loader__disc {
+  width: clamp(110px, 18vw, 170px);
+  margin-bottom: 0.8rem;
+}
+
+.loader__count {
+  margin: 0;
+  font-family: var(--font-display);
+  font-variation-settings: var(--display-axes);
+  font-weight: 900;
+  font-size: clamp(3rem, 8vw, 5rem);
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  color: var(--mustard-soft);
+}
+
+.loader__note {
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}

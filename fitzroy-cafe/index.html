@@ -1,0 +1,494 @@
+<!doctype html>
+<html lang="en-AU">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>[CAFE NAME] · Coffee, plants and DJs in Fitzroy</title>
+    <meta
+      name="description"
+      content="A slightly wonky little cafe in Fitzroy. Good coffee all day, hanging plants everywhere, and DJs spinning records every Friday and Saturday night."
+    />
+    <meta name="theme-color" content="#1d2616" />
+    <script>
+      document.documentElement.classList.add('js');
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..700&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,400..900,0..100,0..1;1,9..144,400..900,0..100,0..1&display=swap"
+    />
+    <link rel="preload" as="image" href="/images/hero.jpg" fetchpriority="high" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="grain" aria-hidden="true"></div>
+
+    <div class="loader" aria-hidden="true">
+      <div class="loader__panel loader__panel--top"></div>
+      <div class="loader__panel loader__panel--bottom"></div>
+      <div class="loader__center">
+        <div class="loader__disc">
+          <svg viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="49" fill="#141210" />
+            <g fill="none" stroke="#fff" stroke-opacity=".08"><circle cx="50" cy="50" r="42" /><circle cx="50" cy="50" r="36" /><circle cx="50" cy="50" r="30" /></g>
+            <circle cx="50" cy="50" r="18" fill="#d4652a" />
+            <path d="M44 45 q6 -6 12 0" fill="none" stroke="#f4ead5" stroke-width="2" stroke-linecap="round" />
+            <circle cx="50" cy="50" r="2.5" fill="#141210" />
+          </svg>
+        </div>
+        <p class="loader__count">00</p>
+        <p class="loader__note">warming up the decks</p>
+      </div>
+    </div>
+
+    <header class="nav">
+      <a class="nav__logo" href="#top">[CAFE NAME]</a>
+      <nav aria-label="Main">
+        <ul class="nav__links">
+          <li><a href="#about">Our story</a></li>
+          <li><a href="#dj-nights">DJ nights</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a class="nav__cta" href="#visit">Visit</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main">
+      <!-- 1. HERO -->
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="hero__bg">
+          <figure class="slot slot--hero" data-file="hero.jpg · 16:9" style="--ph: #3d4a2c">
+            <img
+              src="/images/hero.jpg"
+              alt="The cafe at golden hour: exposed brick, hanging plants and a turntable on the counter"
+              width="2400"
+              height="1350"
+              fetchpriority="high"
+            />
+          </figure>
+        </div>
+        <div class="hero__shade" aria-hidden="true"></div>
+        <div class="hero__glows" aria-hidden="true">
+          <span class="glow glow--1" data-depth="0.6"></span>
+          <span class="glow glow--2" data-depth="1.2"></span>
+          <span class="glow glow--3" data-depth="0.9"></span>
+          <span class="glow glow--4" data-depth="1.6"></span>
+        </div>
+
+        <div class="hero__inner">
+          <p class="hero__kicker" data-intro>Fitzroy, Melbourne · open all week</p>
+          <h1 class="hero__title" id="hero-title">Coffee by day. <em>Records</em> by night.</h1>
+          <p class="hero__lede" data-intro>
+            Oat flat whites, a jungle of hanging plants and a crate of well loved vinyl. Pull up a
+            mismatched chair and stay a while.
+          </p>
+          <div class="hero__ctas" data-intro>
+            <a class="btn btn--rust" href="#dj-nights">See who's spinning</a>
+            <a class="btn btn--ghost" href="#visit">Come find us</a>
+          </div>
+        </div>
+
+        <a class="badge" data-cursor="spin" href="#dj-nights" aria-label="DJs every Friday and Saturday. See the lineup">
+          <svg class="badge__disc" viewBox="0 0 200 200" aria-hidden="true">
+            <defs>
+              <path id="badge-ring" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0" />
+            </defs>
+            <circle cx="100" cy="100" r="99" fill="#16130f" />
+            <g fill="none" stroke="#ffffff" stroke-opacity="0.07">
+              <circle cx="100" cy="100" r="62" />
+              <circle cx="100" cy="100" r="56" />
+              <circle cx="100" cy="100" r="50" />
+              <circle cx="100" cy="100" r="44" />
+            </g>
+            <text class="badge__text">
+              <textPath href="#badge-ring" textLength="486">DJs every Fri + Sat ✺ DJs every Fri + Sat ✺</textPath>
+            </text>
+            <circle cx="100" cy="100" r="36" fill="#d4652a" />
+            <text class="badge__label" x="100" y="96" text-anchor="middle">spin</text>
+            <text class="badge__label badge__label--sm" x="100" y="114" text-anchor="middle">33⅓</text>
+            <circle cx="100" cy="100" r="3.5" fill="#16130f" />
+          </svg>
+        </a>
+      </section>
+
+      <!-- 2. MARQUEE -->
+      <section class="marquee" aria-label="What we're about">
+        <p class="sr-only">Coffee, vinyl, plants and good people.</p>
+        <div class="marquee__band marquee__band--back" data-marquee data-direction="1" aria-hidden="true">
+          <div class="marquee__track">
+            <div class="marquee__group">
+              <span>natural wine</span><svg class="marquee__star" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" /></svg>
+              <span>sourdough</span><svg class="marquee__star" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" /></svg>
+              <span>dogs welcome</span><svg class="marquee__star" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" /></svg>
+              <span>slow mornings</span><svg class="marquee__star" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" /></svg>
+            </div>
+          </div>
+        </div>
+        <div class="marquee__band marquee__band--front" data-marquee data-direction="-1" aria-hidden="true">
+          <div class="marquee__track">
+            <div class="marquee__group">
+              <span>coffee</span><svg class="marquee__star" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" /></svg>
+              <span>vinyl</span><svg class="marquee__star" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" /></svg>
+              <span>plants</span><svg class="marquee__star" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" /></svg>
+              <span>good people</span><svg class="marquee__star" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" /></svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Statement: words fill in as you scroll -->
+      <section class="statement" aria-label="The short version">
+        <p class="statement__text">
+          A cafe by day
+          <span class="statement__icon statement__icon--cup" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M6 12h17v7a7 7 0 0 1-7 7h-3a7 7 0 0 1-7-7z M23 14h2.5a3.5 3.5 0 0 1 0 7H23" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M11 4c-1 2 1 3 0 5M16 4c-1 2 1 3 0 5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></span>,
+          a record bar by night
+          <span class="statement__icon statement__icon--record" aria-hidden="true"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="13" fill="currentColor"/><circle cx="16" cy="16" r="5" fill="#d4652a"/><circle cx="16" cy="16" r="1.5" fill="currentColor"/></svg></span>,
+          and the comfiest living room in Fitzroy
+          <span class="statement__icon statement__icon--plant" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M10 20h12l-2 9h-8z" fill="currentColor"/><path d="M16 20V9M16 14c-4 0-7-3-7-7 4 0 7 3 7 7zM16 12c0-4 3-7 7-7 0 4-3 7-7 7z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/></svg></span>
+          somewhere in between. Come as you are, stay as long as you like.
+        </p>
+      </section>
+
+      <!-- 3. ABOUT -->
+      <section class="about" id="about" aria-labelledby="about-title">
+        <svg class="blob about__blob" viewBox="0 0 200 200" aria-hidden="true">
+          <path d="M44.7,-58.4C57.3,-49.5,66.6,-35.4,70.8,-19.7C75,-4,74.1,13.3,67.2,27.6C60.3,41.9,47.4,53.2,32.6,61.1C17.8,69,1.1,73.5,-16.6,71.5C-34.3,69.5,-53,61,-63.7,46.6C-74.4,32.2,-77.1,11.9,-73.4,-6.4C-69.7,-24.7,-59.6,-41,-45.6,-49.8C-31.6,-58.6,-13.8,-59.9,1.9,-62.5C17.6,-65.1,32.1,-67.3,44.7,-58.4Z" transform="translate(100 100)" />
+        </svg>
+
+        <div class="about__copy">
+          <p class="eyebrow" data-reveal>Our story</p>
+          <h2 class="about__title" id="about-title" data-reveal>
+            It started with one espresso machine, a
+            <span class="scribble">milk crate<span class="scribble__line" aria-hidden="true"><span class="scribble__inner"><svg viewBox="0 0 200 20" preserveAspectRatio="none"><path d="M3 13 C 28 3, 48 19, 78 10 S 128 3, 158 12 S 188 16, 197 7" /></svg></span></span></span>
+            of records and way too many plants.
+          </h2>
+          <p data-reveal>
+            We wanted the kind of place we'd actually hang out in. Somewhere with good coffee, chairs
+            rescued from hard rubbish, a record always spinning and nobody rushing you out the door.
+            So we built it, mostly by hand and slightly crooked.
+          </p>
+          <p data-reveal>
+            These days the plants have taken over, the records have multiplied and our regulars have
+            become mates. Come in for a long black, leave with a new favourite album.
+          </p>
+          <ul class="about__facts" data-reveal>
+            <li>Oat milk, no upcharge</li>
+            <li>Records to swap and borrow</li>
+            <li>Dogs very welcome</li>
+          </ul>
+        </div>
+
+        <div class="about__collage">
+          <figure class="slot collage__item collage__item--1" data-speed="0.5" data-file="about-1.jpg · 4:5" style="--ph: #c99a2e">
+            <img src="/images/about-1.jpg" alt="Barista pulling a shot behind a timber counter" loading="lazy" width="800" height="1000" />
+          </figure>
+          <figure class="slot collage__item collage__item--2" data-speed="1.1" data-file="about-2.jpg · 1:1" style="--ph: #a9451a">
+            <img src="/images/about-2.jpg" alt="Hanging plants trailing down an exposed brick wall" loading="lazy" width="800" height="800" />
+          </figure>
+          <figure class="slot collage__item collage__item--3" data-speed="0.8" data-file="about-3.jpg · 3:4" style="--ph: #5b6436">
+            <img src="/images/about-3.jpg" alt="A worn velvet armchair beside a shelf of vinyl records" loading="lazy" width="750" height="1000" />
+          </figure>
+          <figure class="slot collage__item collage__item--4" data-speed="1.4" data-file="about-4.jpg · 1:1" style="--ph: #2e3a23">
+            <img src="/images/about-4.jpg" alt="Close up of a flat white with a wobbly latte art heart" loading="lazy" width="600" height="600" />
+          </figure>
+          <p class="collage__sticker" aria-hidden="true">hand me down furniture, zero regrets</p>
+        </div>
+      </section>
+
+      <!-- 4. DJ NIGHTS -->
+      <section class="dj" id="dj-nights" aria-labelledby="dj-title">
+        <div class="dj__inner">
+          <div class="dj__side">
+            <header class="dj__head">
+              <p class="eyebrow eyebrow--mustard">Fri + Sat · from 7pm</p>
+              <h2 class="dj__title" id="dj-title">Weekends get loud(ish)</h2>
+              <p class="dj__lede">
+                When the espresso machine cools down, the turntables warm up. Free entry, natural
+                wine, snacks from the kitchen til 10.
+              </p>
+            </header>
+            <div class="dj__vinyl" aria-hidden="true">
+              <div class="dj__glow"></div>
+              <svg class="vinyl" viewBox="0 0 400 400">
+                <defs>
+                  <path id="vinyl-label-ring" d="M200,200 m-50,0 a50,50 0 1,1 100,0 a50,50 0 1,1 -100,0" />
+                </defs>
+                <circle cx="200" cy="200" r="199" fill="#141210" />
+                <g fill="none" stroke="#ffffff" stroke-opacity="0.06">
+                  <circle cx="200" cy="200" r="190" /><circle cx="200" cy="200" r="182" />
+                  <circle cx="200" cy="200" r="175" /><circle cx="200" cy="200" r="166" />
+                  <circle cx="200" cy="200" r="158" /><circle cx="200" cy="200" r="150" />
+                  <circle cx="200" cy="200" r="141" /><circle cx="200" cy="200" r="133" />
+                  <circle cx="200" cy="200" r="124" /><circle cx="200" cy="200" r="116" />
+                  <circle cx="200" cy="200" r="107" /><circle cx="200" cy="200" r="99" />
+                  <circle cx="200" cy="200" r="90" />
+                </g>
+                <circle cx="200" cy="200" r="72" fill="#d4652a" />
+                <circle cx="200" cy="200" r="66" fill="none" stroke="#e0bd62" stroke-width="2" />
+                <text class="vinyl__label-text">
+                  <textPath href="#vinyl-label-ring" textLength="310">SIDE A ✺ FRI + SAT ✺ 33⅓ RPM ✺</textPath>
+                </text>
+                <path d="M184 186 q16 -14 32 0" fill="none" stroke="#f4ead5" stroke-width="3" stroke-linecap="round" />
+                <circle cx="200" cy="200" r="7" fill="#141210" />
+              </svg>
+              <div class="vinyl__sheen"></div>
+              <svg class="tonearm" viewBox="0 0 120 300">
+                <circle cx="90" cy="30" r="22" fill="#2a2620" />
+                <circle cx="90" cy="30" r="12" fill="#c99a2e" />
+                <path d="M90 30 L92 150 L44 236" fill="none" stroke="#d9d2c3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
+                <rect x="28" y="230" width="26" height="40" rx="5" transform="rotate(30 41 250)" fill="#2a2620" />
+              </svg>
+            </div>
+          </div>
+
+          <div class="dj__cards">
+            <article data-cursor="play" class="dj-card dj-card--fri" aria-labelledby="dj-fri-title">
+              <figure class="slot dj-card__img" data-file="dj-friday.jpg · 16:10" style="--ph: #a9451a">
+                <img src="/images/dj-friday.jpg" alt="A DJ behind the decks on a Friday night, warm amber lights and a dancing crowd" loading="lazy" width="1200" height="750" />
+              </figure>
+              <div class="dj-card__body">
+                <p class="dj-card__day">Friday</p>
+                <h3 class="dj-card__title" id="dj-fri-title">Groove Kitchen</h3>
+                <p class="dj-card__vibe">Disco, boogie and funk to shake off the work week.</p>
+                <ul class="lineup">
+                  <li>
+                    <time datetime="2026-11-06">Fri 6 Nov</time>
+                    <span class="lineup__name">DJ Soft Serve</span>
+                    <span class="lineup__meta">Disco + boogie · 7pm til late</span>
+                  </li>
+                  <li>
+                    <time datetime="2026-11-13">Fri 13 Nov</time>
+                    <span class="lineup__name">Mama Lentil</span>
+                    <span class="lineup__meta">Afro funk · 7pm til late</span>
+                  </li>
+                  <li>
+                    <time datetime="2026-11-20">Fri 20 Nov</time>
+                    <span class="lineup__name">Cosmic Crumpet</span>
+                    <span class="lineup__meta">Balearic + italo · 7pm til late</span>
+                  </li>
+                </ul>
+              </div>
+            </article>
+
+            <article data-cursor="play" class="dj-card dj-card--sat" aria-labelledby="dj-sat-title">
+              <figure class="slot dj-card__img" data-file="dj-saturday.jpg · 16:10" style="--ph: #c99a2e">
+                <img src="/images/dj-saturday.jpg" alt="Close up of hands cueing a record on a turntable, plants in the background" loading="lazy" width="1200" height="750" />
+              </figure>
+              <div class="dj-card__body">
+                <p class="dj-card__day">Saturday</p>
+                <h3 class="dj-card__title" id="dj-sat-title">Late Bloomers</h3>
+                <p class="dj-card__vibe">Soul, jazz and dubby things for a long, slow night.</p>
+                <ul class="lineup">
+                  <li>
+                    <time datetime="2026-11-07">Sat 7 Nov</time>
+                    <span class="lineup__name">Velvet Fern</span>
+                    <span class="lineup__meta">Neo soul + jazz · 8pm til 1am</span>
+                  </li>
+                  <li>
+                    <time datetime="2026-11-14">Sat 14 Nov</time>
+                    <span class="lineup__name">Monstera Sound System</span>
+                    <span class="lineup__meta">Dub + reggae · 8pm til 1am</span>
+                  </li>
+                  <li>
+                    <time datetime="2026-11-21">Sat 21 Nov</time>
+                    <span class="lineup__name">Auntie Groove</span>
+                    <span class="lineup__meta">Rare groove · 8pm til 1am</span>
+                  </li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. MENU -->
+      <section class="menu" id="menu" aria-labelledby="menu-title">
+        <header class="menu__head">
+          <p class="eyebrow" data-reveal>The good stuff</p>
+          <h2 class="menu__title" id="menu-title" data-reveal>
+            Made slow, <span class="scribble">served warm<span class="scribble__line" aria-hidden="true"><span class="scribble__inner"><svg viewBox="0 0 200 20" preserveAspectRatio="none"><path d="M3 10 C 40 18, 70 2, 100 11 S 160 18, 197 6" /></svg></span></span></span>
+          </h2>
+          <p class="menu__lede" data-reveal>A few of our favourites. The full menu lives on the chalkboard and changes whenever the kitchen gets bored.</p>
+        </header>
+
+        <ul class="menu__grid">
+          <li class="menu-card" data-cursor="yum">
+            <figure class="slot menu-card__img" data-file="menu-1.jpg · 4:5" style="--ph: #c99a2e">
+              <img src="/images/menu-1.jpg" alt="A flat white in a speckled handmade cup" loading="lazy" width="800" height="1000" />
+            </figure>
+            <div class="menu-card__body">
+              <h3>The Big Hug</h3>
+              <p>Our house blend flat white. Silky, chocolatey, oat at no extra cost.</p>
+            </div>
+            <span class="menu-card__price">$5.5</span>
+          </li>
+          <li class="menu-card" data-cursor="yum">
+            <figure class="slot menu-card__img" data-file="menu-2.jpg · 4:5" style="--ph: #a9451a">
+              <img src="/images/menu-2.jpg" alt="An iced dirty chai with cinnamon on top" loading="lazy" width="800" height="1000" />
+            </figure>
+            <div class="menu-card__body">
+              <h3>Dirty chai, extra dirty</h3>
+              <p>House spiced chai with a double shot. Hot or iced, always a mood.</p>
+            </div>
+            <span class="menu-card__price">$7</span>
+          </li>
+          <li class="menu-card" data-cursor="yum">
+            <figure class="slot menu-card__img" data-file="menu-3.jpg · 4:5" style="--ph: #5b6436">
+              <img src="/images/menu-3.jpg" alt="Garlicky mushrooms piled on sourdough with whipped feta" loading="lazy" width="800" height="1000" />
+            </figure>
+            <div class="menu-card__body">
+              <h3>Mushies on toast</h3>
+              <p>Garlicky mushrooms, whipped feta, herbs and chilli oil on thick sourdough.</p>
+            </div>
+            <span class="menu-card__price">$19</span>
+          </li>
+          <li class="menu-card" data-cursor="yum">
+            <figure class="slot menu-card__img" data-file="menu-4.jpg · 4:5" style="--ph: #2e3a23">
+              <img src="/images/menu-4.jpg" alt="A thick slice of toasted banana bread with a pat of butter" loading="lazy" width="800" height="1000" />
+            </figure>
+            <div class="menu-card__body">
+              <h3>Banana bread, thick cut</h3>
+              <p>Toasted, with a generous swipe of miso butter. Life changing, probably.</p>
+            </div>
+            <span class="menu-card__price">$8</span>
+          </li>
+        </ul>
+
+        <aside class="board" aria-labelledby="board-title" data-reveal>
+          <h3 class="board__title" id="board-title">Also on the board</h3>
+          <ul class="board__list">
+            <li><span>Batch brew</span><span>$4.5</span></li>
+            <li><span>Ceremonial matcha</span><span>$6.5</span></li>
+            <li><span>Kombucha on tap</span><span>$6</span></li>
+            <li><span>Cheesy kimchi toastie</span><span>$13</span></li>
+            <li><span>Natural wine (Fri + Sat)</span><span>$13</span></li>
+          </ul>
+        </aside>
+      </section>
+
+      <!-- 6. GALLERY -->
+      <section class="gallery" id="gallery" aria-labelledby="gallery-title">
+        <div class="gallery__progress" aria-hidden="true"><span></span></div>
+        <div class="gallery__viewport" data-cursor="scroll" tabindex="0" role="region" aria-label="Photo gallery, scrolls sideways">
+          <ul class="gallery__track">
+            <li class="gallery__intro">
+              <p class="eyebrow eyebrow--mustard">Snapshots</p>
+              <h2 class="gallery__title" id="gallery-title">A peek inside</h2>
+              <p class="gallery__hint">Have a wander, it goes sideways <span aria-hidden="true">→</span></p>
+            </li>
+            <li class="gallery__item" style="--ar: 4 / 5; --tilt: -2deg">
+              <figure>
+                <div class="slot" data-file="gallery-1.jpg · 4:5" style="--ph: #c99a2e">
+                  <img src="/images/gallery-1.jpg" alt="Morning light falling across the window bar" loading="lazy" width="800" height="1000" />
+                </div>
+                <figcaption>8am, window seat, best seat</figcaption>
+              </figure>
+            </li>
+            <li class="gallery__item" style="--ar: 3 / 2; --tilt: 1.5deg">
+              <figure>
+                <div class="slot" data-file="gallery-2.jpg · 3:2" style="--ph: #a9451a">
+                  <img src="/images/gallery-2.jpg" alt="The crowd dancing under string lights on a Saturday night" loading="lazy" width="1200" height="800" />
+                </div>
+                <figcaption>Saturday, somewhere after 11</figcaption>
+              </figure>
+            </li>
+            <li class="gallery__item gallery__item--arch" style="--ar: 3 / 4; --tilt: -1deg">
+              <figure>
+                <div class="slot" data-file="gallery-3.jpg · 3:4" style="--ph: #5b6436">
+                  <img src="/images/gallery-3.jpg" alt="Crates of second hand records beside a monstera plant" loading="lazy" width="750" height="1000" />
+                </div>
+                <figcaption>The crates. Dig responsibly.</figcaption>
+              </figure>
+            </li>
+            <li class="gallery__item" style="--ar: 1 / 1; --tilt: 2.5deg">
+              <figure>
+                <div class="slot" data-file="gallery-4.jpg · 1:1" style="--ph: #d4652a">
+                  <img src="/images/gallery-4.jpg" alt="A table of friends sharing toast and coffee" loading="lazy" width="1000" height="1000" />
+                </div>
+                <figcaption>Brunch that turned into lunch</figcaption>
+              </figure>
+            </li>
+            <li class="gallery__item" style="--ar: 4 / 5; --tilt: -2.5deg">
+              <figure>
+                <div class="slot" data-file="gallery-5.jpg · 4:5" style="--ph: #2e3a23">
+                  <img src="/images/gallery-5.jpg" alt="A dog asleep under a vintage table" loading="lazy" width="800" height="1000" />
+                </div>
+                <figcaption>Head of security, on duty</figcaption>
+              </figure>
+            </li>
+            <li class="gallery__item" style="--ar: 3 / 2; --tilt: 1deg">
+              <figure>
+                <div class="slot" data-file="gallery-6.jpg · 3:2" style="--ph: #c99a2e">
+                  <img src="/images/gallery-6.jpg" alt="The shopfront at dusk with warm light spilling onto the footpath" loading="lazy" width="1200" height="800" />
+                </div>
+                <figcaption>See you out the front</figcaption>
+              </figure>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 7. VISIT -->
+      <section class="visit" id="visit" aria-labelledby="visit-title">
+        <div class="visit__info">
+          <p class="eyebrow" data-reveal>Visit us</p>
+          <h2 class="visit__title" id="visit-title" data-reveal>Come say <span class="scribble">hi<span class="scribble__line" aria-hidden="true"><span class="scribble__inner"><svg viewBox="0 0 200 20" preserveAspectRatio="none"><path d="M3 12 C 50 2, 90 20, 197 8" /></svg></span></span></span></h2>
+          <dl class="visit__list">
+            <div data-reveal>
+              <dt>Find us</dt>
+              <dd><address>[ADDRESS]<br />Fitzroy VIC 3065</address></dd>
+            </div>
+            <div data-reveal>
+              <dt>Hours</dt>
+              <dd>[HOURS]</dd>
+            </div>
+            <div data-reveal>
+              <dt>DJ nights</dt>
+              <dd>Fri 7pm til late<br />Sat 8pm til 1am</dd>
+            </div>
+            <div data-reveal>
+              <dt>Instagram</dt>
+              <dd><a href="https://www.instagram.com/[HANDLE]/" rel="noopener" target="_blank">@[HANDLE]<span class="sr-only"> (opens in a new tab)</span></a></dd>
+            </div>
+          </dl>
+        </div>
+
+        <!--
+          Map placeholder. To use a real map, replace the contents of .visit__map with e.g.
+          <iframe title="Map to [CAFE NAME]" src="https://www.google.com/maps/embed?pb=..." loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        -->
+        <div class="visit__map" data-cursor="hi!" role="img" aria-label="Map placeholder showing the cafe in Fitzroy">
+          <svg class="map__streets" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <g fill="none" stroke="#f4ead5" stroke-linecap="round">
+              <path d="M-10 60 L410 80" stroke-width="10" stroke-opacity=".5" />
+              <path d="M-10 170 L410 150" stroke-width="16" stroke-opacity=".7" />
+              <path d="M-10 250 L410 262" stroke-width="8" stroke-opacity=".4" />
+              <path d="M90 -10 L110 310" stroke-width="12" stroke-opacity=".55" />
+              <path d="M250 -10 L235 310" stroke-width="9" stroke-opacity=".45" />
+              <path d="M330 -10 L360 310" stroke-width="6" stroke-opacity=".35" />
+            </g>
+            <ellipse cx="320" cy="225" rx="48" ry="30" fill="#5b6436" />
+            <text x="320" y="230" text-anchor="middle" class="map__park">park</text>
+          </svg>
+          <div class="map__pin" aria-hidden="true">
+            <svg viewBox="0 0 40 52"><path d="M20 0C9 0 0 8.6 0 19.6 0 34 20 52 20 52s20-18 20-32.4C40 8.6 31 0 20 0z" fill="#a9451a" /><circle cx="20" cy="19" r="7" fill="#f4ead5" /></svg>
+          </div>
+          <p class="map__note">Map embed goes here</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- 8. FOOTER -->
+    <footer class="footer">
+      <p class="footer__mark">[CAFE NAME]</p>
+      <p class="footer__signoff">Made with oat milk, dusty records and a little bit of love in Fitzroy. Ok bye, see you Friday x</p>
+      <div class="footer__meta">
+        <p>We acknowledge the Wurundjeri Woi-wurrung people of the Kulin Nation, Traditional Owners of the land we brew, cook and dance on.</p>
+        <p><a href="#top">Back to the top <span aria-hidden="true">↑</span></a></p>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

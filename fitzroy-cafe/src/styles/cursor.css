@@ -1,0 +1,27 @@
+/* Follower that grows into a labelled bubble over [data-cursor] elements. */
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 160;
+  display: grid;
+  place-items: center;
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+  background: var(--mustard-soft);
+  color: var(--ink);
+  pointer-events: none;
+}
+
+.cursor__label {
+  font: 800 0.95rem/1 var(--font-display);
+  font-variation-settings: var(--display-axes);
+  font-style: italic;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.cursor.is-active .cursor__label {
+  opacity: 1;
+}

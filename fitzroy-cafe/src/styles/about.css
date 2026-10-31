@@ -1,0 +1,142 @@
+.about {
+  position: relative;
+  isolation: isolate;
+  overflow-x: clip;
+  display: grid;
+  gap: clamp(3rem, 8vw, 5rem);
+  /* Full bleed so the blob clips at the viewport edge, content still centred. */
+  padding: var(--section-y) max(var(--gutter), calc((100% - var(--max)) / 2));
+}
+
+.about__blob {
+  top: 38%;
+  right: -20%;
+  width: min(110vw, 760px);
+  fill: var(--mustard-soft);
+  opacity: 0.45;
+  z-index: -1;
+}
+
+.about__title {
+  margin-bottom: 1.8rem;
+  font-size: clamp(2.2rem, 5.5vw, 4rem);
+}
+
+.about__copy {
+  max-width: 36rem;
+}
+
+.about__copy > p:not(.eyebrow) {
+  color: var(--ink-soft);
+}
+
+.about__facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1.8rem;
+}
+
+.about__facts li {
+  padding: 0.45rem 0.95rem;
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.about__facts li:nth-child(2) {
+  rotate: -2deg;
+  background: var(--forest);
+  border-color: var(--forest);
+  color: var(--cream);
+}
+
+/* Collage: absolutely placed, overlapping, each slightly rotated. */
+.about__collage {
+  position: relative;
+  aspect-ratio: 1 / 1.08;
+  width: 100%;
+  max-width: 640px;
+  justify-self: center;
+}
+
+.collage__item {
+  position: absolute;
+  box-shadow: var(--shadow-soft);
+}
+
+.collage__item--1 {
+  top: 5%;
+  left: 0;
+  width: 50%;
+  aspect-ratio: 4 / 5;
+  border-radius: var(--radius-arch);
+  rotate: -4deg;
+}
+
+.collage__item--2 {
+  top: 0;
+  right: 2%;
+  width: 44%;
+  aspect-ratio: 1;
+  border-radius: var(--radius-blob);
+  rotate: 5deg;
+}
+
+.collage__item--3 {
+  bottom: 2%;
+  left: 24%;
+  z-index: 2;
+  width: 42%;
+  aspect-ratio: 3 / 4;
+  border-radius: var(--radius);
+  rotate: 2deg;
+}
+
+.collage__item--4 {
+  right: 0;
+  bottom: 14%;
+  z-index: 3;
+  width: 33%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  rotate: -7deg;
+  border: 6px solid var(--cream);
+}
+
+.collage__sticker {
+  position: absolute;
+  bottom: 0;
+  left: -2%;
+  z-index: 4;
+  max-width: 12ch;
+  margin: 0;
+  padding: 0.7rem 0.9rem;
+  border-radius: 14px;
+  background: var(--forest);
+  color: var(--cream);
+  font-family: var(--font-display);
+  font-variation-settings: var(--display-axes);
+  font-style: italic;
+  font-weight: 600;
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+  line-height: 1.1;
+  rotate: -6deg;
+}
+
+@media (min-width: 900px) {
+  .about {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+    align-items: center;
+  }
+
+  .about__collage {
+    margin-right: -2rem;
+  }
+
+  .about__blob {
+    top: 10%;
+    right: -8%;
+  }
+}

@@ -1,0 +1,121 @@
+.visit {
+  display: grid;
+  gap: 3rem;
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: var(--section-y) var(--gutter);
+}
+
+.visit__title {
+  margin-bottom: 2.2rem;
+  font-size: clamp(3rem, 9vw, 6.5rem);
+}
+
+.visit__list {
+  display: grid;
+  gap: 1.6rem;
+  margin: 0;
+}
+
+.visit__list > div {
+  padding-top: 1rem;
+  border-top: 2px solid var(--ink);
+}
+
+.visit__list dt {
+  margin-bottom: 0.3rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--rust);
+}
+
+.visit__list dd {
+  margin: 0;
+  font-family: var(--font-display);
+  font-variation-settings: var(--display-axes);
+  font-weight: 650;
+  font-size: 1.4rem;
+  line-height: 1.25;
+}
+
+.visit__list a {
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+  text-decoration-color: var(--rust-bright);
+}
+
+.visit__list a:hover {
+  color: var(--rust);
+}
+
+.visit__map {
+  position: relative;
+  min-height: 320px;
+  overflow: hidden;
+  border-radius: 40% 60% 32px 32px / 18% 22% 32px 32px;
+  background: var(--olive);
+  box-shadow: var(--shadow-soft);
+}
+
+.visit__map iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.map__streets {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.map__park {
+  font: italic 600 13px var(--font-display);
+  fill: var(--cream);
+}
+
+.map__pin {
+  position: absolute;
+  top: 44%;
+  left: 47%;
+  width: 46px;
+  translate: -50% -100%;
+  filter: drop-shadow(0 8px 10px rgb(0 0 0 / 0.35));
+}
+
+.map__note {
+  position: absolute;
+  left: 1.2rem;
+  bottom: 1.2rem;
+  margin: 0;
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  background: var(--paper);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+@media (min-width: 600px) {
+  .visit__list {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .visit {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 5rem;
+  }
+
+  .visit__map {
+    min-height: 520px;
+    rotate: 1.5deg;
+  }
+}

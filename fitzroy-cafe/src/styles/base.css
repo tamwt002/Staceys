@@ -1,0 +1,331 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+  line-height: 1.6;
+  font-optical-sizing: auto;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-variation-settings: var(--display-axes);
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+p {
+  margin: 0 0 1em;
+  text-wrap: pretty;
+}
+
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+}
+
+address {
+  font-style: normal;
+}
+
+/* ---------- Accessibility ---------- */
+
+:focus-visible {
+  outline: 3px solid var(--mustard);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+.skip-link {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 200;
+  padding: 0.7rem 1.1rem;
+  background: var(--ink);
+  color: var(--cream);
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  transform: translateY(-200%);
+}
+
+.skip-link:focus-visible {
+  transform: none;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---------- Film grain ---------- */
+
+.grain {
+  position: fixed;
+  inset: -50%;
+  z-index: 150;
+  pointer-events: none;
+  opacity: 0.09;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation: grain 0.9s steps(5) infinite;
+}
+
+@keyframes grain {
+  0% { transform: translate(0, 0); }
+  20% { transform: translate(-4%, 3%); }
+  40% { transform: translate(3%, -5%); }
+  60% { transform: translate(-6%, -2%); }
+  80% { transform: translate(5%, 4%); }
+  100% { transform: translate(0, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .grain {
+    animation: none;
+  }
+}
+
+/* ---------- Nav ---------- */
+
+.nav {
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem var(--gutter);
+  color: var(--cream);
+}
+
+.nav__logo {
+  font-family: var(--font-display);
+  font-variation-settings: var(--display-axes);
+  font-weight: 800;
+  font-size: 1.35rem;
+  text-decoration: none;
+  letter-spacing: -0.01em;
+}
+
+.nav__links {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.75rem, 2vw, 2rem);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.nav__links li:not(:last-child) {
+  display: none;
+}
+
+.nav__links a {
+  text-decoration: none;
+  padding: 0.3rem 0;
+  background: linear-gradient(currentColor, currentColor) left bottom / 0 2px no-repeat;
+  transition: background-size 0.35s var(--ease-out);
+}
+
+.nav__links a:hover {
+  background-size: 100% 2px;
+}
+
+.nav__links .nav__cta {
+  padding: 0.55rem 1.1rem;
+  border: 2px solid currentColor;
+  border-radius: 999px;
+  background: none;
+  transition: background-color 0.25s, color 0.25s;
+}
+
+.nav__links .nav__cta:hover {
+  background: var(--cream);
+  color: var(--forest-deep);
+}
+
+@media (min-width: 720px) {
+  .nav__links li:not(:last-child) {
+    display: block;
+  }
+}
+
+/* ---------- Shared bits ---------- */
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6em;
+  margin-bottom: 1.1rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--rust);
+}
+
+.eyebrow::before {
+  content: '';
+  width: 1.8em;
+  height: 2px;
+  background: currentColor;
+  border-radius: 2px;
+}
+
+.eyebrow--mustard {
+  color: var(--mustard-soft);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.95rem 1.5rem;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background-color 0.25s, color 0.25s;
+}
+
+.btn--rust {
+  background: var(--rust);
+  color: var(--cream);
+}
+
+.btn--rust:hover {
+  background: var(--rust-bright);
+  color: var(--ink);
+}
+
+.btn--ghost {
+  border: 2px solid currentColor;
+  color: var(--cream);
+}
+
+.btn--ghost:hover {
+  background: var(--cream);
+  color: var(--forest-deep);
+}
+
+.blob {
+  position: absolute;
+  pointer-events: none;
+}
+
+/* Hand-drawn underline. JS reveals it left to right with two counter-moving transforms. */
+.scribble {
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.scribble__line {
+  position: absolute;
+  left: -3%;
+  right: -3%;
+  bottom: -0.16em;
+  height: 0.32em;
+  overflow: hidden;
+}
+
+.scribble__inner {
+  display: block;
+  height: 100%;
+}
+
+.scribble svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.scribble path {
+  fill: none;
+  stroke: var(--rust-bright);
+  stroke-width: 5;
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+}
+
+/* ---------- Image slots ---------- */
+/* Until a real image loads, a slot looks like a warm, moody photo: soft amber
+   light from one corner, dark falloff, and a small filename tag. */
+
+.slot {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  --ph-light: color-mix(in srgb, var(--ph, var(--olive)) 55%, #ffd7a1);
+  --ph-dark: color-mix(in srgb, var(--ph, var(--olive)) 45%, #0c0a07);
+  background:
+    radial-gradient(90% 70% at 28% 22%, var(--ph-light) 0%, transparent 60%),
+    radial-gradient(120% 90% at 80% 110%, var(--ph-dark) 0%, transparent 70%),
+    var(--ph, var(--olive));
+}
+
+.slot::after {
+  content: attr(data-file);
+  position: absolute;
+  left: 0.9rem;
+  bottom: 0.8rem;
+  padding: 0.3em 0.65em;
+  border-radius: 6px;
+  background: rgb(12 10 7 / 0.35);
+  color: rgb(251 245 232 / 0.85);
+  font: 600 0.68rem/1.2 var(--font-body);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.slot img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slot.is-missing img {
+  visibility: hidden;
+}

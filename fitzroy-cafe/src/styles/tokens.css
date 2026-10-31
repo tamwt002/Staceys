@@ -1,0 +1,33 @@
+:root {
+  /* Palette */
+  --forest: #2e3a23;
+  --forest-deep: #1d2616;
+  --olive: #5b6436;
+  --rust: #a9451a; /* text-safe on cream, cream-safe as a background */
+  --rust-bright: #d4652a; /* decorative only */
+  --cream: #f4ead5;
+  --cream-deep: #eadcbd;
+  --paper: #fbf5e8;
+  --mustard: #c99a2e;
+  --mustard-soft: #e0bd62;
+  --ink: #1b1812;
+  --ink-soft: #3b362c;
+
+  /* Type */
+  --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-body: 'Bricolage Grotesque', ui-sans-serif, system-ui, sans-serif;
+  --display-axes: 'SOFT' 100, 'WONK' 1;
+
+  /* Layout */
+  --gutter: clamp(1.25rem, 4.5vw, 3.5rem);
+  --section-y: clamp(5rem, 12vw, 10rem);
+  --max: 1320px;
+
+  /* Shapes */
+  --radius: 22px;
+  --radius-blob: 58% 42% 46% 54% / 44% 56% 44% 56%;
+  --radius-arch: 999px 999px 26px 26px;
+
+  --shadow-soft: 0 18px 40px -18px rgb(27 24 18 / 0.45);
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
