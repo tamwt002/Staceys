@@ -18,9 +18,13 @@ Open the URL Vite prints (usually http://localhost:5173).
 ## Project structure
 
 ```
-index.html              All page markup (sections 1 to 8, in order)
+index.html              Homepage markup (sections 1 to 8, in order)
+site.config.js          Cafe name, live URL, address: used by the blog and SEO tags
+content/blog/           Blog posts, one Markdown file each
+build/                  Vite plugin that turns the Markdown into static blog pages
 public/images/          Drop your images here (see the table below)
-src/main.js             Entry: imports styles, sets up Lenis + gsap.matchMedia()
+src/main.js             Homepage entry: imports styles, sets up Lenis + gsap.matchMedia()
+src/blog.js             Entry for the blog pages
 src/lib/                gsap.js (plugin registration), smooth-scroll.js, images.js, reveal.js
 src/animations/         One file per section: intro, hero, marquee, statement, about, dj-nights, menu,
                         gallery, visit, footer, plus pointer.js (cursor bubble + magnetic buttons)
@@ -33,7 +37,7 @@ Search the project for these and replace them:
 
 | Placeholder   | Where                                              |
 | ------------- | -------------------------------------------------- |
-| `[CAFE NAME]` | Page title, nav logo, footer wordmark, this README |
+| `[CAFE NAME]` | `site.config.js` (blog + SEO), plus page title, nav logo and footer in `index.html` |
 | `[ADDRESS]`   | Visit section                                      |
 | `[HOURS]`     | Visit section                                      |
 | `[HANDLE]`    | Visit section (Instagram link and label)           |
@@ -42,6 +46,49 @@ The DJ lineup, menu items and prices are placeholder copy in `index.html`. Edit 
 
 To use a real map, replace the contents of `.visit__map` in `index.html` with a Google Maps
 `<iframe>` (there's a comment showing exactly where). The CSS already sizes an iframe to fill it.
+
+## The blog (Journal)
+
+Posts are Markdown files in `content/blog/`. At dev and build time, `build/blog-plugin.js` turns
+them into real static HTML pages, so search engines get fully rendered content:
+
+- `/blog/` lists every post, newest first
+- `/blog/<filename>/` is each post (the filename becomes the URL, so keep it short and keyword-y)
+- The two latest posts also appear in a "From the journal" strip on the homepage
+- `sitemap.xml`, `feed.xml` (RSS) and `robots.txt` are generated into the build
+
+**Writing a post:** copy an existing file in `content/blog/`, rename it, and edit the front matter:
+
+```md
+---
+title: "Your headline"
+description: "One or two sentences. This is what shows in Google results, so make it count."
+date: 2026-11-14
+author: "Theo"
+imageAlt: "What the cover photo shows"
+tags: [DJ nights, Fitzroy]
+draft: true
+---
+
+Your post in Markdown...
+```
+
+- `draft: true` shows the post in `npm run dev` but leaves it out of the production build.
+- The cover image is `public/images/blog/<filename>.jpg` (16:9, around 1600 × 900). Until it
+  exists you'll see a placeholder. You can point elsewhere with `image: /images/whatever.jpg`.
+- Writing `[CAFE NAME]` in a post is swapped for the name in `site.config.js`.
+- Save the file and the dev server reloads with the new page.
+
+**Before you go live:** set `url` in `site.config.js` to your real domain. Canonical links, the
+sitemap, RSS and social share tags are all built from it. Then submit
+`https://yourdomain/sitemap.xml` in Google Search Console.
+
+The `blog/` folder in the project root is generated and gitignored. It's rebuilt every time,
+so never edit files in there; edit the Markdown instead.
+
+**SEO included:** unique titles and meta descriptions, canonical URLs, Open Graph and Twitter
+cards, `BlogPosting` + breadcrumb structured data on posts, `CafeOrCoffeeShop` local business
+data on the homepage, internal links between posts, sitemap and RSS.
 
 ## Swapping in your images
 
@@ -71,6 +118,7 @@ JPGs around 80% quality are plenty. Below-the-fold images are lazy-loaded automa
 | `gallery-4.jpg`   | Horizontal gallery, photo 4                     | 1:1          | 1000 × 1000    |
 | `gallery-5.jpg`   | Horizontal gallery, photo 5                     | 4:5          | 800 × 1000     |
 | `gallery-6.jpg`   | Horizontal gallery, photo 6                     | 3:2          | 1200 × 800     |
+| `blog/<post>.jpg` | Blog post cover and card, one per post          | 16:9         | 1600 × 900     |
 
 Images use `object-fit: cover`, so a slightly different ratio still works. It will just crop.
 Collage and circle shapes crop to the centre, so keep the subject roughly centred there.

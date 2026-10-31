@@ -329,3 +329,18 @@ address {
 .slot.is-missing img {
   visibility: hidden;
 }
+
+/* Nav on cream pages (the blog), where there's no dark hero behind it. */
+.nav--ink {
+  position: relative;
+  color: var(--ink);
+}
+
+.nav--ink .nav__links .nav__cta:hover {
+  background: var(--ink);
+  color: var(--cream);
+}
+
+.nav__links a[aria-current='page'] {
+  background-size: 100% 2px;
+}

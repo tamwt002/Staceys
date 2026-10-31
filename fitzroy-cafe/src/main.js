@@ -2,6 +2,7 @@ import 'lenis/dist/lenis.css';
 import './styles/main.css';
 
 import { gsap, ScrollTrigger } from './lib/gsap.js';
+import { MEDIA } from './lib/media.js';
 import { createSmoothScroll } from './lib/smooth-scroll.js';
 import { initImageSlots } from './lib/images.js';
 
@@ -13,6 +14,7 @@ import { aboutAnimation } from './animations/about.js';
 import { djAnimation } from './animations/dj-nights.js';
 import { menuAnimation } from './animations/menu.js';
 import { galleryAnimation } from './animations/gallery.js';
+import { journalAnimation } from './animations/journal.js';
 import { visitAnimation } from './animations/visit.js';
 import { footerAnimation } from './animations/footer.js';
 import { pointerAnimation } from './animations/pointer.js';
@@ -27,12 +29,7 @@ initImageSlots(refresh);
 const mm = gsap.matchMedia();
 
 mm.add(
-  {
-    // "Desktop" needs enough height too, otherwise pinned sections get cramped.
-    isDesktop: '(min-width: 900px) and (min-height: 600px)',
-    isMobile: '(max-width: 899.98px), (max-height: 599.98px)',
-    reduceMotion: '(prefers-reduced-motion: reduce)',
-  },
+  MEDIA,
   (context) => {
     const { reduceMotion } = context.conditions;
 
@@ -55,6 +52,7 @@ mm.add(
       djAnimation(context.conditions),
       menuAnimation(context.conditions),
       galleryAnimation(context.conditions),
+      journalAnimation(context.conditions),
       visitAnimation(context.conditions),
       footerAnimation(context.conditions),
       pointerAnimation(context.conditions),
