@@ -8,11 +8,14 @@ export default {
     'A little back garden cafe in Fitzroy, and an old two storey house that turns into a house party every Friday and Saturday night.',
   locale: 'en_AU',
   address: {
-    street: '[ADDRESS]',
     locality: 'Fitzroy',
     region: 'VIC',
     postcode: '3065',
     country: 'AU',
   },
-  instagram: '[HANDLE]',
+  // Garden cafe opening hours (24h), every day. Used for Google's opening hours.
+  hours: [
+    { opens: '05:30', closes: '11:00' },
+    { opens: '15:30', closes: '19:00' },
+  ],
 };

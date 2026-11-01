@@ -6,7 +6,6 @@ export function menuAnimation({ isDesktop }) {
   if (!section) return;
 
   reveal(section.querySelectorAll('.menu__head [data-reveal]'), { trigger: section.querySelector('.menu__head') });
-  reveal(section.querySelector('.board'), { y: 50 });
   revealScribbles(section);
 
   const cards = gsap.utils.toArray(section.querySelectorAll('.menu-card'));

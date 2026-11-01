@@ -31,20 +31,12 @@ src/animations/         One file per section: intro, hero, statement, about, dj-
 src/styles/             tokens.css (palette, fonts), base.css, then one file per section
 ```
 
-## Filling in the placeholders
-
-Search the project for these and replace them:
-
-| Placeholder   | Where                                              |
-| ------------- | -------------------------------------------------- |
-| `[ADDRESS]`   | Visit section                                      |
-| `[HOURS]`     | Visit section                                      |
-| `[HANDLE]`    | Visit section (Instagram link and label)           |
+## Editing content
 
 The DJ lineup, menu items and prices are placeholder copy in `index.html`. Edit them in place.
 
-To use a real map, replace the contents of `.visit__map` in `index.html` with a Google Maps
-`<iframe>` (there's a comment showing exactly where). The CSS already sizes an iframe to fill it.
+The map in the Visit section is a Google Maps embed centred on Fitzroy. To pin an exact spot
+later, change the `q=` part of the iframe `src` in `index.html` to your street address.
 
 ## The blog (Journal)
 

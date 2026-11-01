@@ -41,7 +41,7 @@ Saturday is a bit slower and a bit deeper. Soul, jazz, dub, reggae and rare groo
 - **Sounds like:** neo soul, jazz, dub, rare groove
 - **Good for:** long conversations, slow dancing, discovering your new favourite album
 
-Our [upcoming lineup](/#dj-nights) is always on the homepage, and we post set times on Instagram at @[HANDLE] every week.
+Our [upcoming lineup](/#dj-nights) is always on the homepage, so check it before you head over.
 
 ## What's on the bar
 
@@ -76,7 +76,7 @@ It's a real street with real people asleep on it, so keep it down out the front 
 
 ## Want to play?
 
-We love giving local DJs a go, especially people who haven't played out much before. If you've got a crate of records and a sound you're proud of, send a mix and a few lines about yourself to @[HANDLE] on Instagram. Vinyl sets get extra love from Theo.
+We love giving local DJs a go, especially people who haven't played out much before. If you've got a crate of records and a sound you're proud of, come down on a Friday or Saturday, find Theo, and tell him about it. Or mention it when you [sign up as a member](https://wozpolls.woztech.world/mixed-poll/CnvBBp0udQae2UAksoik). Vinyl sets get extra love from Theo.
 
 ## See you on the weekend
 

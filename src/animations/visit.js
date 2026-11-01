@@ -8,12 +8,13 @@ export function visitAnimation() {
   reveal(section.querySelectorAll('[data-reveal]'), { trigger: section, start: 'top 70%', stagger: 0.08 });
   revealScribbles(section);
 
-  // The map pin drops in and bounces.
-  gsap.from(section.querySelector('.map__pin'), {
-    y: -140,
+  // The map tips in like a postcard being dropped on the table.
+  gsap.from(section.querySelector('.visit__map'), {
+    y: 80,
+    rotate: -6,
     autoAlpha: 0,
-    duration: 1.2,
-    ease: 'bounce.out',
-    scrollTrigger: { trigger: section.querySelector('.visit__map'), start: 'top 70%', once: true },
+    duration: 1.1,
+    ease: 'back.out(1.4)',
+    scrollTrigger: { trigger: section.querySelector('.visit__map'), start: 'top 80%', once: true },
   });
 }

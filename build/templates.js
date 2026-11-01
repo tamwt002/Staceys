@@ -273,13 +273,17 @@ export function renderHomeSeo() {
     servesCuisine: ['Coffee', 'Brunch'],
     address: {
       '@type': 'PostalAddress',
-      streetAddress: site.address.street,
       addressLocality: site.address.locality,
       addressRegion: site.address.region,
       postalCode: site.address.postcode,
       addressCountry: site.address.country,
     },
-    sameAs: [`https://www.instagram.com/${site.instagram}/`],
+    openingHoursSpecification: site.hours.map(({ opens, closes }) => ({
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+      opens,
+      closes,
+    })),
   });
 
   return `<link rel="canonical" href="${abs('/')}" />
