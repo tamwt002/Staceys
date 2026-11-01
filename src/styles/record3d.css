@@ -1,0 +1,57 @@
+/* Records in 3D. The outer layer holds the resting tilt, the inner layer
+   follows the mouse, the disc spins inside, and the light sits on top
+   without spinning, which is what makes vinyl look round and glossy. */
+.record3d,
+.record3d__tilt {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+/* Two stacked discs underneath give the vinyl its edge and cast the shadow. */
+.record3d__tilt::before,
+.record3d__tilt::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+}
+
+.record3d__tilt::before {
+  background: #2a251e;
+  transform: translateZ(calc(var(--thickness, 5px) * -0.5));
+}
+
+.record3d__tilt::after {
+  background: #0b0907;
+  transform: translateZ(calc(var(--thickness, 5px) * -1));
+  box-shadow: 0 30px 50px -12px rgb(0 0 0 / 0.6);
+}
+
+.record3d__tilt > svg:first-child {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.record3d__sheen {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  translate: 0 0 1px;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 60% 35% at 30% 22%, rgb(255 255 255 / 0.16), transparent 70%),
+    conic-gradient(
+      from 200deg,
+      transparent 0deg,
+      rgb(255 255 255 / 0.12) 25deg,
+      transparent 60deg,
+      transparent 180deg,
+      rgb(255 255 255 / 0.08) 205deg,
+      transparent 240deg
+    );
+}

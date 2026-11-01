@@ -1,11 +1,13 @@
 import { gsap, SplitText } from '../lib/gsap.js';
 import { roomyMasks } from '../lib/reveal.js';
+import { tiltRecord } from '../lib/record3d.js';
 
 export function djAnimation({ isDesktop }) {
   const section = document.querySelector('.dj');
   if (!section) return;
 
   const vinyl = section.querySelector('.vinyl');
+  const record = section.querySelector('.record3d');
   const tonearm = section.querySelector('.tonearm');
   const glow = section.querySelector('.dj__glow');
   const cards = section.querySelectorAll('.dj-card');
@@ -38,6 +40,9 @@ export function djAnimation({ isDesktop }) {
     // Pinned sequence: tonearm drops onto the record, then Friday and
     // Saturday swing in like doors, while the record spins with scroll.
     gsap.set(tonearm, { rotate: -12 });
+    // The record starts lying almost flat on the platter and tips up toward
+    // you as the tonearm drops.
+    gsap.set(record, { rotationX: 64, rotationY: -8 });
 
     const tl = gsap.timeline({
       defaults: { ease: 'power3.out' },
@@ -52,6 +57,7 @@ export function djAnimation({ isDesktop }) {
     });
 
     tl.to(tonearm, { rotate: 22, duration: 0.5, ease: 'back.out(2)' }, 0);
+    tl.to(record, { rotationX: 26, rotationY: -12, duration: 0.6, ease: 'power2.out' }, 0);
 
     cards.forEach((card, i) => {
       const at = 0.35 + i * 0.85;
@@ -77,7 +83,7 @@ export function djAnimation({ isDesktop }) {
 
     tl.to({}, { duration: 0.5 }); // short hold before unpinning
     tl.fromTo(vinyl, { rotate: 0 }, { rotate: 1080, ease: 'none', duration: tl.duration() }, 0);
-    return;
+    return tiltRecord(record, section, { maxX: 8, maxY: 12 });
   }
 
   // Mobile: no pinning. Cards rise in as they enter, the record turns with scroll.

@@ -84,12 +84,12 @@
   width: clamp(96px, 22vw, 190px);
   aspect-ratio: 1;
   border-radius: 50%;
-  filter: drop-shadow(0 14px 24px rgb(0 0 0 / 0.35));
+  perspective: 700px;
 }
 
-.badge__disc {
-  width: 100%;
-  height: 100%;
+.badge .record3d {
+  --thickness: 6px;
+  transform: rotateX(24deg) rotateY(-16deg);
 }
 
 .badge__text {

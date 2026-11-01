@@ -1,5 +1,6 @@
 import { gsap, SplitText } from '../lib/gsap.js';
 import { roomyMasks } from '../lib/reveal.js';
+import { tiltRecord } from '../lib/record3d.js';
 
 export function heroAnimation({ isDesktop, delay = 0 }) {
   const hero = document.querySelector('.hero');
@@ -97,5 +98,10 @@ export function heroAnimation({ isDesktop, delay = 0 }) {
   };
 
   hero.addEventListener('pointermove', onMove);
-  return () => hero.removeEventListener('pointermove', onMove);
+  const untilt = tiltRecord(badge.querySelector('.record3d'), hero);
+
+  return () => {
+    hero.removeEventListener('pointermove', onMove);
+    untilt?.();
+  };
 }

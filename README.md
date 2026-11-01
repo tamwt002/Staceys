@@ -131,11 +131,12 @@ file with the same name to swap it.
 - All animations are created inside one `gsap.matchMedia()` block, so they clean up and rebuild
   when you cross the desktop/mobile breakpoint.
 - **Everywhere (with motion on)**: curtain intro with a spinning record and counter, 3D headline
-  flip, drifting light leaks in the hero, scroll-filled statement,
+  flip, records drawn in 3D (tilted with a vinyl edge and a light that stays put while they spin), drifting light leaks in the hero, scroll-filled statement,
   beat-pulsing glow behind the DJ record, elastic footer wordmark.
 - **Desktop** (≥ 900px wide and ≥ 600px tall): pinned DJ Nights (tonearm drops, cards swing in
   in 3D, record spins with scroll), menu cards dealt onto the table, hero parallax,
-  pointer parallax,
+  pointer parallax, records that lean toward the cursor, the House record tipping up as the tonearm
+  drops,
   a cursor bubble that labels things ("spin", "play", "yum"), magnetic buttons and card tilt.
 - To change the cursor labels, edit the `data-cursor` attributes in `index.html`.
 - **Mobile**: no pinning or scroll parallax. DJ cards simply fade up.
