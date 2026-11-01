@@ -52,6 +52,8 @@ We keep it simple and good.
 - Coffee and our dirty chai until 9pm (yes, people order espresso at 11pm, no, we don't judge)
 - **Snacks from the kitchen until 10pm.** The cheesy kimchi toastie is non negotiable.
 
+Prefer to bring your own? That's fine, as long as it's local. BYO drinks need to be locally made, brewed or produced, or from a locally owned business.
+
 ## Is it free?
 
 Yes. Entry is always free. If you love the DJ, buy them a drink or tell your friends. That's the whole business model.
@@ -64,11 +66,13 @@ Nope. It's walk in only and first come, first served. It does get busy after 9pm
 
 We don't have many, but we take them seriously.
 
-1. **Be kind.** To the staff, the DJs and each other. Anyone making someone feel unsafe will be asked to leave, no second chances.
-2. **Ask before you film people.** Filming the decks is fine. Filming strangers dancing without asking is not.
-3. **Dance badly, with pride.** Nobody here is watching your moves. Well, Kofi is, but only because he's jealous.
-4. **Mind the neighbours.** It's a real street with real people asleep on it. Keep it down out the front and on the way home, and they'll keep loving us.
-5. **Look after the plants.** They've been here longer than most of the furniture.
+1. **Wear your name badge.** You'll get one at the door. Keep it on the whole time you're in the House, so nobody's a stranger for long.
+2. **Swap your little something.** Everyone gets an ornament or trinket on arrival. Your job is to swap it with someone else before the night's out.
+3. **Themed night? Go all in.** We expect full participation. Costumes, colours, whatever the theme asks for.
+4. **BYO, but make it local.** Locally made, brewed or produced drinks, or from a locally owned business. Or grab something from our bar.
+5. **Don't be a dickhead.** Pretty simple, really.
+
+It's a real street with real people asleep on it, so keep it down out the front and on the way home too.
 
 ## Want to play?
 

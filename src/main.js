@@ -11,6 +11,7 @@ import { heroAnimation } from './animations/hero.js';
 import { statementAnimation } from './animations/statement.js';
 import { aboutAnimation } from './animations/about.js';
 import { djAnimation } from './animations/dj-nights.js';
+import { rulesAnimation } from './animations/rules.js';
 import { menuAnimation } from './animations/menu.js';
 import { galleryAnimation } from './animations/gallery.js';
 import { journalAnimation } from './animations/journal.js';
@@ -48,6 +49,7 @@ mm.add(
       // Pinned sections must be created in page order so later triggers
       // account for the pin spacing of earlier ones.
       djAnimation(context.conditions),
+      rulesAnimation(context.conditions),
       menuAnimation(context.conditions),
       galleryAnimation(context.conditions),
       journalAnimation(context.conditions),
