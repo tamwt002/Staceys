@@ -1,6 +1,6 @@
 ---
 title: "The power of coffee for the soul (and the night four friends started a cafe)"
-description: "How a broken espresso machine, a milk crate of records and four friends turned an old Fitzroy house and its overgrown garden into Waldos. Plus why we think coffee is good for the soul."
+description: "How a broken espresso machine, a milk crate of records and four friends turned an old Fitzroy house and its overgrown garden into Stacy's. Plus why we think coffee is good for the soul."
 date: 2026-10-24
 author: "Mia, Theo, Ana and Kofi"
 imageAlt: "Four friends laughing over breakfast at a sunlit cafe table"
@@ -9,7 +9,7 @@ tags: [our story, Fitzroy cafe, coffee, Melbourne]
 
 Coffee is a funny thing. On paper it's roasted seeds and hot water. In real life it's the first warm thing you hold in the morning, the excuse to step away from your desk, the reason you finally talk to the person who's been sitting at the next table every Tuesday for a month.
 
-We've spent a lot of time thinking about why a small cup of something brown matters so much to so many people. Turns out the answer is also the story of how this garden, and the old house in front of it, became Waldos. So pull up a chair. This one's a bit long, and it starts with a broken heater.
+We've spent a lot of time thinking about why a small cup of something brown matters so much to so many people. Turns out the answer is also the story of how this garden, and the old house in front of it, became Stacy's. So pull up a chair. This one's a bit long, and it starts with a broken heater.
 
 ## It started in a share house on a Tuesday
 

@@ -1,4 +1,4 @@
-# Waldos
+# Stacy's
 
 A single-page site for an alternative cafe in Fitzroy with DJ nights every Friday and Saturday.
 Vanilla HTML, hand-written CSS, GSAP (ScrollTrigger + SplitText) and Lenis, bundled with Vite.
@@ -68,7 +68,7 @@ Your post in Markdown...
 - `draft: true` shows the post in `npm run dev` but leaves it out of the production build.
 - The cover image is `public/images/blog/<filename>.jpg` (16:9, around 1600 × 900). Until it
   exists you'll see a placeholder. You can point elsewhere with `image: /images/whatever.jpg`.
-- Writing `[CAFE NAME]` in a post is swapped for the name in `site.config.js` (currently Waldos),
+- Writing `[CAFE NAME]` in a post is swapped for the name in `site.config.js` (currently Stacy's),
   handy if the name ever changes.
 - Save the file and the dev server reloads with the new page.
 
@@ -138,6 +138,9 @@ file with the same name to swap it.
   pointer parallax, records that lean toward the cursor, the House record tipping up as the tonearm
   drops,
   a cursor bubble that labels things ("spin", "play", "yum"), magnetic buttons and card tilt.
+- **Soft section snap (desktop)**: scrolling stays free, but when you stop within a quarter of a
+  screen of a section's top it glides into place. Mid-section stops are left alone, so long
+  sections still scroll normally. Tune it in `src/lib/snap.js` (`distanceThreshold`, `duration`).
 - To change the cursor labels, edit the `data-cursor` attributes in `index.html`.
 - **Mobile**: no pinning or scroll parallax. DJ cards simply fade up.
 - **prefers-reduced-motion**: no smooth scrolling and no GSAP animations at all. Everything is

@@ -3,7 +3,8 @@ import './styles/main.css';
 
 import { gsap, ScrollTrigger } from './lib/gsap.js';
 import { MEDIA } from './lib/media.js';
-import { createSmoothScroll } from './lib/smooth-scroll.js';
+import { createSmoothScroll, getLenis } from './lib/smooth-scroll.js';
+import { createSectionSnap } from './lib/snap.js';
 import { initImageSlots } from './lib/images.js';
 
 import { introAnimation } from './animations/intro.js';
@@ -52,6 +53,9 @@ mm.add(
       visitAnimation(context.conditions),
       footerAnimation(context.conditions),
       pointerAnimation(context.conditions),
+      // Desktop only, and created last so pinned sections already have their spacers.
+      context.conditions.isDesktop &&
+        createSectionSnap(getLenis(), ['.hero', '.statement', '.dj', '.rules', '.menu', '.journal', '.visit']),
     ].filter((fn) => typeof fn === 'function');
 
     return () => cleanups.forEach((fn) => fn());

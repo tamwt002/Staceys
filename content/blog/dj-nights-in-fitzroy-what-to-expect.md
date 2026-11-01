@@ -1,5 +1,5 @@
 ---
-title: "DJ nights in Fitzroy: what to expect on a Friday or Saturday at Waldos"
+title: "DJ nights in Fitzroy: what to expect on a Friday or Saturday at Stacy's"
 description: "Two floors of an old Fitzroy house, free entry, natural wine and records til late. Everything you need to know about our Friday and Saturday DJ nights, from the music to the house rules."
 date: 2026-10-31
 author: "Theo"

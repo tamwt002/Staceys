@@ -1,7 +1,7 @@
 // Site-wide details used by the blog generator and SEO tags.
 // Change these once and every generated page, the sitemap and the RSS feed follow.
 export default {
-  name: 'Waldos',
+  name: "Stacy's",
   // Your live domain, no trailing slash. Used for canonical links, sitemap and RSS.
   url: 'https://www.example.com',
   description:
