@@ -26,7 +26,7 @@ public/images/          Drop your images here (see the table below)
 src/main.js             Homepage entry: imports styles, sets up Lenis + gsap.matchMedia()
 src/blog.js             Entry for the blog pages
 src/lib/                gsap.js (plugin registration), smooth-scroll.js, images.js, reveal.js
-src/animations/         One file per section: intro, hero, statement, about, dj-nights, rules,
+src/animations/         One file per section: intro, hero, statement, dj-nights, rules,
                         menu, journal, visit, footer, blog, plus pointer.js (cursor bubble +
                         magnetic buttons)
 src/styles/             tokens.css (palette, fonts), base.css, then one file per section
@@ -96,10 +96,6 @@ JPGs around 80% quality are plenty. Below-the-fold images are lazy-loaded automa
 | Filename          | Where it appears                                | Aspect ratio | Suggested size |
 | ----------------- | ----------------------------------------------- | ------------ | -------------- |
 | `hero.jpg`        | Full-screen hero background (parallax)          | 16:9         | 2400 × 1350    |
-| `about-1.jpg`     | About collage, large arch-shaped photo (left)   | 4:5          | 800 × 1000     |
-| `about-2.jpg`     | About collage, blob-shaped photo (top right)    | 1:1          | 800 × 800      |
-| `about-3.jpg`     | About collage, centre photo (front)             | 3:4          | 750 × 1000     |
-| `about-4.jpg`     | About collage, small circle (bottom right)      | 1:1          | 600 × 600      |
 | `dj-friday.jpg`   | DJ Nights, Friday card                          | 16:10        | 1200 × 750     |
 | `dj-saturday.jpg` | DJ Nights, Saturday card                        | 16:10        | 1200 × 750     |
 | `menu-1.jpg`      | Menu card 1 (flat white)                        | 4:5          | 800 × 1000     |
@@ -121,10 +117,6 @@ file with the same name to swap it.
 | File | Photographer |
 | ---- | ------------ |
 | `hero.jpg` | [Colin redwood](https://unsplash.com/photos/string-lights-illuminate-an-outdoor-patio-with-tables-and-chairs-kzX1Vv6-Wgk) |
-| `about-1.jpg` | [Brent Gorwin](https://unsplash.com/photos/man-pouring-latte-on-coffee-vhQUnmnOLys) |
-| `about-2.jpg` | [Tatyana Rubleva](https://unsplash.com/photos/outdoor-patio-with-plants-and-furniture-KELRtQq_PLM) |
-| `about-3.jpg` | [Clay Banks](https://unsplash.com/photos/a-record-player-sitting-on-top-of-a-wooden-shelf-3XIIpTy3FNI) |
-| `about-4.jpg` | [Joe Hepburn](https://unsplash.com/photos/cup-of-cappuccino-EcWFOYOpkpY) |
 | `dj-friday.jpg` | [Vadim Morozov](https://unsplash.com/photos/person-in-gray-t-shirt-playing-dj-mixer-nNnY3T3rw00) |
 | `dj-saturday.jpg` | [Andrea Cipriani](https://unsplash.com/photos/vinyl-record-spinning-on-turntable-GTIutdltrkA) |
 | `menu-1.jpg` | [Polina Kuzovkova](https://unsplash.com/photos/a-cup-of-coffee-on-a-saucer-on-a-table-2tfFzduVohU) |
@@ -142,7 +134,7 @@ file with the same name to swap it.
   flip, drifting light leaks in the hero, scroll-filled statement,
   beat-pulsing glow behind the DJ record, elastic footer wordmark.
 - **Desktop** (≥ 900px wide and ≥ 600px tall): pinned DJ Nights (tonearm drops, cards swing in
-  in 3D, record spins with scroll), menu cards dealt onto the table, hero and collage parallax,
+  in 3D, record spins with scroll), menu cards dealt onto the table, hero parallax,
   pointer parallax,
   a cursor bubble that labels things ("spin", "play", "yum"), magnetic buttons and card tilt.
 - To change the cursor labels, edit the `data-cursor` attributes in `index.html`.

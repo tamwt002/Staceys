@@ -63,7 +63,7 @@ function nav() {
       <a class="nav__logo" href="/">${escapeHtml(site.name)}</a>
       <nav aria-label="Main">
         <ul class="nav__links">
-          <li><a href="/#about">Our story</a></li>
+          <li><a href="/blog/coffee-for-the-soul-our-story/">Our story</a></li>
           <li><a href="/#dj-nights">The House</a></li>
           <li><a href="/blog/" aria-current="page">Journal</a></li>
           <li><a class="nav__cta" href="/#visit">Visit</a></li>

@@ -9,7 +9,6 @@ import { initImageSlots } from './lib/images.js';
 import { introAnimation } from './animations/intro.js';
 import { heroAnimation } from './animations/hero.js';
 import { statementAnimation } from './animations/statement.js';
-import { aboutAnimation } from './animations/about.js';
 import { djAnimation } from './animations/dj-nights.js';
 import { rulesAnimation } from './animations/rules.js';
 import { menuAnimation } from './animations/menu.js';
@@ -44,7 +43,6 @@ mm.add(
       intro.cleanup,
       heroAnimation({ ...context.conditions, delay: intro.delay }),
       statementAnimation(context.conditions),
-      aboutAnimation(context.conditions),
       // Pinned sections must be created in page order so later triggers
       // account for the pin spacing of earlier ones.
       djAnimation(context.conditions),
