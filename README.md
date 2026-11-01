@@ -26,8 +26,9 @@ public/images/          Drop your images here (see the table below)
 src/main.js             Homepage entry: imports styles, sets up Lenis + gsap.matchMedia()
 src/blog.js             Entry for the blog pages
 src/lib/                gsap.js (plugin registration), smooth-scroll.js, images.js, reveal.js
-src/animations/         One file per section: intro, hero, statement, about, dj-nights, menu,
-                        gallery, visit, footer, plus pointer.js (cursor bubble + magnetic buttons)
+src/animations/         One file per section: intro, hero, statement, about, dj-nights, rules,
+                        menu, journal, visit, footer, blog, plus pointer.js (cursor bubble +
+                        magnetic buttons)
 src/styles/             tokens.css (palette, fonts), base.css, then one file per section
 ```
 
@@ -105,12 +106,6 @@ JPGs around 80% quality are plenty. Below-the-fold images are lazy-loaded automa
 | `menu-2.jpg`      | Menu card 2 (dirty chai)                        | 4:5          | 800 × 1000     |
 | `menu-3.jpg`      | Menu card 3 (mushrooms on toast)                | 4:5          | 800 × 1000     |
 | `menu-4.jpg`      | Menu card 4 (banana bread)                      | 4:5          | 800 × 1000     |
-| `gallery-1.jpg`   | Horizontal gallery, photo 1                     | 4:5          | 800 × 1000     |
-| `gallery-2.jpg`   | Horizontal gallery, photo 2                     | 3:2          | 1200 × 800     |
-| `gallery-3.jpg`   | Horizontal gallery, photo 3                     | 3:4          | 750 × 1000     |
-| `gallery-4.jpg`   | Horizontal gallery, photo 4                     | 1:1          | 1000 × 1000    |
-| `gallery-5.jpg`   | Horizontal gallery, photo 5                     | 4:5          | 800 × 1000     |
-| `gallery-6.jpg`   | Horizontal gallery, photo 6                     | 3:2          | 1200 × 800     |
 | `blog/<post>.jpg` | Blog post cover and card, one per post          | 16:9         | 1600 × 900     |
 
 Images use `object-fit: cover`, so a slightly different ratio still works. It will just crop.
@@ -136,12 +131,6 @@ file with the same name to swap it.
 | `menu-2.jpg` | [Empreinte](https://unsplash.com/photos/iced-coffee-with-milk-pouring-02O1bXB_fgk) |
 | `menu-3.jpg` | [Sadia Alam](https://unsplash.com/photos/sauteed-mushrooms-with-garlic-and-toast-bEgpca34KYk) |
 | `menu-4.jpg` | [Diego Arenas de Rodrigo](https://unsplash.com/photos/slices-of-banana-bread-on-a-wooden-cutting-board-bWj_oZPjXS8) |
-| `gallery-1.jpg` | [LinDol](https://unsplash.com/photos/coffee-and-a-cookie-on-a-wooden-tray-outdoors-prm6dlyWifw) |
-| `gallery-2.jpg` | [Arash](https://unsplash.com/photos/yellow-string-lights-lighted-during-nighttime-UZjBmpaXq_w) |
-| `gallery-3.jpg` | [Cord Allman](https://unsplash.com/photos/hands-browsing-through-a-crate-of-vinyl-records-oWAiw137GKw) |
-| `gallery-4.jpg` | [Andrii Solok](https://unsplash.com/photos/friends-enjoying-food-and-drinks-at-an-outdoor-cafe-table-NfO0dUwM-iE) |
-| `gallery-5.jpg` | [Jim Luo](https://unsplash.com/photos/man-with-dog-outside-cafe-AwiJa_B39_Q) |
-| `gallery-6.jpg` | [Eugene Uhanov](https://unsplash.com/photos/dark-wooden-building-with-string-lights-at-dusk--Oj1aOG5ZP8) |
 | `blog/coffee-for-the-soul-our-story.jpg` | [Queensland, Australia](https://unsplash.com/photos/people-laughing-at-breakfast-restaurant-table-QQNEOQxDwM8) |
 | `blog/dj-nights-in-fitzroy-what-to-expect.jpg` | [Vadim Morozov](https://unsplash.com/photos/person-in-blue-denim-jeans-standing-in-front-of-dj-mixer-jFM-cGrQ2GY) |
 
@@ -153,12 +142,11 @@ file with the same name to swap it.
   flip, drifting light leaks in the hero, scroll-filled statement,
   beat-pulsing glow behind the DJ record, elastic footer wordmark.
 - **Desktop** (≥ 900px wide and ≥ 600px tall): pinned DJ Nights (tonearm drops, cards swing in
-  in 3D, record spins with scroll), menu cards dealt onto the table, pinned horizontal gallery
-  that skews with scroll speed plus a progress bar, hero and collage parallax, pointer parallax,
+  in 3D, record spins with scroll), menu cards dealt onto the table, hero and collage parallax,
+  pointer parallax,
   a cursor bubble that labels things ("spin", "play", "yum"), magnetic buttons and card tilt.
 - To change the cursor labels, edit the `data-cursor` attributes in `index.html`.
-- **Mobile**: no pinning or scroll parallax. The gallery becomes a native swipe row, and DJ cards
-  simply fade up.
+- **Mobile**: no pinning or scroll parallax. DJ cards simply fade up.
 - **prefers-reduced-motion**: no smooth scrolling and no GSAP animations at all. Everything is
   visible straight away and the film grain stops moving.
 - Animations only touch `transform` and `opacity`.

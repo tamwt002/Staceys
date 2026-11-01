@@ -13,7 +13,6 @@ import { aboutAnimation } from './animations/about.js';
 import { djAnimation } from './animations/dj-nights.js';
 import { rulesAnimation } from './animations/rules.js';
 import { menuAnimation } from './animations/menu.js';
-import { galleryAnimation } from './animations/gallery.js';
 import { journalAnimation } from './animations/journal.js';
 import { visitAnimation } from './animations/visit.js';
 import { footerAnimation } from './animations/footer.js';
@@ -51,7 +50,6 @@ mm.add(
       djAnimation(context.conditions),
       rulesAnimation(context.conditions),
       menuAnimation(context.conditions),
-      galleryAnimation(context.conditions),
       journalAnimation(context.conditions),
       visitAnimation(context.conditions),
       footerAnimation(context.conditions),
