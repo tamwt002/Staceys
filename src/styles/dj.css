@@ -38,8 +38,7 @@
 }
 
 .vinyl__label-text {
-  font: 700 10.5px var(--font-body);
-  letter-spacing: 0.1em;
+  font: 400 12px var(--font-label);
   fill: var(--cream);
 }
 

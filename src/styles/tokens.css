@@ -17,6 +17,8 @@
   --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
   --font-body: 'Bricolage Grotesque', ui-sans-serif, system-ui, sans-serif;
   --display-axes: 'SOFT' 100, 'WONK' 1;
+  /* Worn typewriter face for record labels, like an old hand-stamped sleeve. */
+  --font-label: 'Special Elite', 'Courier New', monospace;
 
   /* Layout */
   --gutter: clamp(1.25rem, 4.5vw, 3.5rem);

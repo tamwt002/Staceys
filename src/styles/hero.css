@@ -93,20 +93,17 @@
 }
 
 .badge__text {
-  font: 700 15px var(--font-body);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  font: 400 16px var(--font-label);
   fill: var(--cream);
 }
 
 .badge__label {
-  font: 800 17px var(--font-display);
-  font-variation-settings: var(--display-axes);
+  font: 400 16px var(--font-label);
   fill: var(--ink);
 }
 
 .badge__label--sm {
-  font: 700 11px var(--font-body);
+  font-size: 11px;
 }
 
 /* Wider screens: the headline fills the top, so the badge spins in the
