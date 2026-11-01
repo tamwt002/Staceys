@@ -1,13 +1,13 @@
 ---
 title: "DJ nights in Fitzroy: what to expect on a Friday or Saturday at Waldos"
-description: "Free entry, natural wine, snacks til 10 and records til late. Everything you need to know about our weekend DJ nights in Fitzroy, from the music to the house rules."
+description: "Two floors of an old Fitzroy house, free entry, natural wine and records til late. Everything you need to know about our Friday and Saturday DJ nights, from the music to the house rules."
 date: 2026-10-31
 author: "Theo"
-imageAlt: "A crowd gathered around the DJ on a night out"
+imageAlt: "A DJ on the decks in a backyard with friends gathered close"
 tags: [DJ nights, Fitzroy, things to do in Melbourne, vinyl]
 ---
 
-Every Friday and Saturday, once the last flat white is pulled and the espresso machine gets a well earned rest, we push a few tables aside, drag the decks to the front window and turn the cafe into a tiny, slightly sweaty record bar.
+Every Friday and Saturday, once the last flat white is pulled in the garden and Doris the espresso machine gets a well earned rest, we flick on the lamps in the old house, put a record on and open the front door. Two floors, a creaky staircase and a lounge room that gets slightly sweaty by 10pm. Basically the house party you used to go to, with better speakers and someone else doing the dishes.
 
 If you've never been, here's everything you need to know before you come down.
 
@@ -15,9 +15,17 @@ If you've never been, here's everything you need to know before you come down.
 
 Short version: we [accidentally threw a party on our opening night](/blog/coffee-for-the-soul-our-story/) and people kept coming back. A few years later it's become the bit of the week we look forward to most. It's still the same idea. Good records, good people, no velvet rope.
 
+## Two floors, two moods
+
+**Downstairs** is the lounge room and old kitchen, and it's where the dancing happens. The main DJ sets up where the fireplace used to be, the rugs get rolled back and it fills up fast.
+
+**Upstairs** is the listening room. The front bedrooms are now crates of records, saggy couches and a second turntable playing slower, deeper stuff at a volume you can actually talk over. It's the place for long conversations and for finding out what that track was.
+
+**The stairs** are technically neither, and somehow they're always the best seats in the house.
+
 ## Fridays: Groove Kitchen
 
-Friday is for shaking off the work week. Think disco, boogie, funk and the occasional Italo banger that makes everyone lose their minds a little. The energy builds slowly. Early on it's chatty and warm, and by 10pm the tables are definitely in the way.
+Friday is for shaking off the work week. Think disco, boogie, funk and the occasional Italo banger that makes everyone lose their minds a little. The energy builds slowly. Early on it's chatty and warm, and by 10pm the lounge room is wall to wall.
 
 - **When:** 7pm til late
 - **Sounds like:** disco, boogie, afro funk, balearic, and a fair bit of minimal house
@@ -50,7 +58,7 @@ Yes. Entry is always free. If you love the DJ, buy them a drink or tell your fri
 
 ## Do I need to book?
 
-Nope. It's walk in only and first come, first served. It does get busy after 9pm on Fridays, so come early if you want a seat by the window.
+Nope. It's walk in only and first come, first served. It does get busy after 9pm on Fridays, so come early if you want a spot on the upstairs couches.
 
 ## The house rules
 
@@ -59,7 +67,8 @@ We don't have many, but we take them seriously.
 1. **Be kind.** To the staff, the DJs and each other. Anyone making someone feel unsafe will be asked to leave, no second chances.
 2. **Ask before you film people.** Filming the decks is fine. Filming strangers dancing without asking is not.
 3. **Dance badly, with pride.** Nobody here is watching your moves. Well, Kofi is, but only because he's jealous.
-4. **Look after the plants.** They've been here longer than most of the furniture.
+4. **Mind the neighbours.** It's a real street with real people asleep on it. Keep it down out the front and on the way home, and they'll keep loving us.
+5. **Look after the plants.** They've been here longer than most of the furniture.
 
 ## Want to play?
 
@@ -67,6 +76,6 @@ We love giving local DJs a go, especially people who haven't played out much bef
 
 ## See you on the weekend
 
-Fitzroy has no shortage of places to go out on a Friday or Saturday night, and we love that. But if you're after somewhere warm and unpretentious, with records you won't hear anywhere else and a glass of something good, come find us.
+Fitzroy has no shortage of places to go out on a Friday or Saturday night, and we love that. But if you miss the kind of night that happens in someone's house, with records you won't hear anywhere else and a glass of something good, come find us.
 
-Doors open from 7pm on Fridays and 8pm on Saturdays. [Here's where we are](/#visit). We'll keep a record spinning for you.
+The House opens from 7pm on Fridays and 8pm on Saturdays. [Here's where we are](/#visit). We'll keep a record spinning for you.

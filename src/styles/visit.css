@@ -119,3 +119,12 @@
     rotate: 1.5deg;
   }
 }
+
+.visit__note {
+  display: block;
+  margin-top: 0.4rem;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+}

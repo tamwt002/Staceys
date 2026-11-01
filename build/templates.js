@@ -64,7 +64,7 @@ function nav() {
       <nav aria-label="Main">
         <ul class="nav__links">
           <li><a href="/#about">Our story</a></li>
-          <li><a href="/#dj-nights">DJ nights</a></li>
+          <li><a href="/#dj-nights">The House</a></li>
           <li><a href="/blog/" aria-current="page">Journal</a></li>
           <li><a class="nav__cta" href="/#visit">Visit</a></li>
         </ul>
@@ -75,7 +75,7 @@ function nav() {
 function footer() {
   return `<footer class="footer">
       <p class="footer__mark">${escapeHtml(site.name)}</p>
-      <p class="footer__signoff">Made with oat milk, dusty records and a little bit of love in Fitzroy. Ok bye, see you Friday x</p>
+      <p class="footer__signoff">Made with oat milk, dusty records and a little bit of love in a back garden in Fitzroy. Ok bye, see you Friday x</p>
       <div class="footer__meta">
         <p>We acknowledge the Wurundjeri Woi-wurrung people of the Kulin Nation, Traditional Owners of the land we brew, cook and dance on.</p>
         <p><a href="/">Back to the cafe <span aria-hidden="true">↑</span></a></p>
@@ -104,7 +104,7 @@ export function postCard(post, index = 0, { headingLevel = 2 } = {}) {
 
 export function renderIndex(posts) {
   const title = `The Journal · ${site.name}, a cafe in Fitzroy`;
-  const description = `Stories, coffee talk and DJ night news from ${site.name}, an alternative cafe and record bar in Fitzroy, Melbourne.`;
+  const description = `Stories, coffee talk and DJ night news from ${site.name}, a garden cafe and house party venue in Fitzroy, Melbourne.`;
 
   const structured = jsonLd({
     '@context': 'https://schema.org',
@@ -286,7 +286,7 @@ export function renderHomeSeo() {
     <meta property="og:site_name" content="${escapeHtml(site.name)}" />
     <meta property="og:locale" content="${site.locale}" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="${escapeHtml(site.name)} · Coffee, plants and DJs in Fitzroy" />
+    <meta property="og:title" content="${escapeHtml(site.name)} · Garden cafe and house parties in Fitzroy" />
     <meta property="og:description" content="${escapeHtml(site.description)}" />
     <meta property="og:url" content="${abs('/')}" />
     <meta property="og:image" content="${abs('/images/hero.jpg')}" />
@@ -317,7 +317,7 @@ export function renderFeed(posts) {
   <channel>
     <title>${escapeHtml(site.name)} Journal</title>
     <link>${abs('/blog/')}</link>
-    <description>${escapeHtml(`Stories from ${site.name}, a cafe and record bar in Fitzroy, Melbourne.`)}</description>
+    <description>${escapeHtml(`Stories from ${site.name}, a garden cafe and house party venue in Fitzroy, Melbourne.`)}</description>
     <language>en-au</language>
     <atom:link href="${abs('/feed.xml')}" rel="self" type="application/rss+xml" />
 ${posts

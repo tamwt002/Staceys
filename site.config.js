@@ -5,7 +5,7 @@ export default {
   // Your live domain, no trailing slash. Used for canonical links, sitemap and RSS.
   url: 'https://www.example.com',
   description:
-    'A slightly wonky little cafe in Fitzroy. Good coffee all day, hanging plants everywhere, and DJs spinning records every Friday and Saturday night.',
+    'A little back garden cafe in Fitzroy, and an old two storey house that turns into a house party every Friday and Saturday night.',
   locale: 'en_AU',
   address: {
     street: '[ADDRESS]',

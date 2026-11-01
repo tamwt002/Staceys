@@ -133,25 +133,25 @@ file with the same name to swap it.
 
 | File | Photographer |
 | ---- | ------------ |
-| `hero.jpg` | [Haberdoedas](https://unsplash.com/photos/a-dimly-lit-coffee-bar-with-plants-and-espresso-machine-XEaMMGDy-fE) |
+| `hero.jpg` | [Colin redwood](https://unsplash.com/photos/string-lights-illuminate-an-outdoor-patio-with-tables-and-chairs-kzX1Vv6-Wgk) |
 | `about-1.jpg` | [Brent Gorwin](https://unsplash.com/photos/man-pouring-latte-on-coffee-vhQUnmnOLys) |
-| `about-2.jpg` | [Anna Kharkivska](https://unsplash.com/photos/hanging-plants-against-a-weathered-brick-wall-2ge0kjuud6A) |
-| `about-3.jpg` | [Haoli Chen](https://unsplash.com/photos/black-leather-chair-and-vinyl-records-EYDtugA7Mbg) |
+| `about-2.jpg` | [Tatyana Rubleva](https://unsplash.com/photos/outdoor-patio-with-plants-and-furniture-KELRtQq_PLM) |
+| `about-3.jpg` | [Clay Banks](https://unsplash.com/photos/a-record-player-sitting-on-top-of-a-wooden-shelf-3XIIpTy3FNI) |
 | `about-4.jpg` | [Joe Hepburn](https://unsplash.com/photos/cup-of-cappuccino-EcWFOYOpkpY) |
-| `dj-friday.jpg` | [Matty Adame](https://unsplash.com/photos/man-playing-dj-turntable-nLUb9GThIcg) |
+| `dj-friday.jpg` | [Vadim Morozov](https://unsplash.com/photos/person-in-gray-t-shirt-playing-dj-mixer-nNnY3T3rw00) |
 | `dj-saturday.jpg` | [Andrea Cipriani](https://unsplash.com/photos/vinyl-record-spinning-on-turntable-GTIutdltrkA) |
 | `menu-1.jpg` | [Polina Kuzovkova](https://unsplash.com/photos/a-cup-of-coffee-on-a-saucer-on-a-table-2tfFzduVohU) |
 | `menu-2.jpg` | [Empreinte](https://unsplash.com/photos/iced-coffee-with-milk-pouring-02O1bXB_fgk) |
 | `menu-3.jpg` | [Sadia Alam](https://unsplash.com/photos/sauteed-mushrooms-with-garlic-and-toast-bEgpca34KYk) |
 | `menu-4.jpg` | [Diego Arenas de Rodrigo](https://unsplash.com/photos/slices-of-banana-bread-on-a-wooden-cutting-board-bWj_oZPjXS8) |
-| `gallery-1.jpg` | [Esra Afşar](https://unsplash.com/photos/two-empty-chairs-at-a-cafe-counter-overlooking-street-vAXn-LXUQa8) |
+| `gallery-1.jpg` | [LinDol](https://unsplash.com/photos/coffee-and-a-cookie-on-a-wooden-tray-outdoors-prm6dlyWifw) |
 | `gallery-2.jpg` | [Arash](https://unsplash.com/photos/yellow-string-lights-lighted-during-nighttime-UZjBmpaXq_w) |
 | `gallery-3.jpg` | [Cord Allman](https://unsplash.com/photos/hands-browsing-through-a-crate-of-vinyl-records-oWAiw137GKw) |
 | `gallery-4.jpg` | [Andrii Solok](https://unsplash.com/photos/friends-enjoying-food-and-drinks-at-an-outdoor-cafe-table-NfO0dUwM-iE) |
 | `gallery-5.jpg` | [Jim Luo](https://unsplash.com/photos/man-with-dog-outside-cafe-AwiJa_B39_Q) |
-| `gallery-6.jpg` | [rocky Liu](https://unsplash.com/photos/a-bike-parked-outside-of-a-store-at-night-Trh31ZOamdw) |
+| `gallery-6.jpg` | [Eugene Uhanov](https://unsplash.com/photos/dark-wooden-building-with-string-lights-at-dusk--Oj1aOG5ZP8) |
 | `blog/coffee-for-the-soul-our-story.jpg` | [Queensland, Australia](https://unsplash.com/photos/people-laughing-at-breakfast-restaurant-table-QQNEOQxDwM8) |
-| `blog/dj-nights-in-fitzroy-what-to-expect.jpg` | [Aleksandr Popov](https://unsplash.com/photos/people-inside-building-at-night-DPspiXW2zWg) |
+| `blog/dj-nights-in-fitzroy-what-to-expect.jpg` | [Vadim Morozov](https://unsplash.com/photos/person-in-blue-denim-jeans-standing-in-front-of-dj-mixer-jFM-cGrQ2GY) |
 
 ## Motion notes
 
